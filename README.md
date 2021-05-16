@@ -1,3 +1,21 @@
+# Face Value
+
+Face value is a React app that allows a user to add an image by adding the url of the image and our app with the help of
+an image recognition API will detect and show if there are any faces in the image . This app has following features:
+
+1) Sign-up and Login
+2) Add image to the app using its **URL**
+3) Detect any faces in the image using [**Smart Brain API**](http://digital-jess.com/smart-brain.html)
+4) Show a rectangle around the faces being detected in the image
+5) Keep track of the number of times a user has used our app for face recognition
+
+# Technologies used
+
+1) [**REACT.JS**](https://reactjs.org/) for front end development
+2) **NODE.JS** and **EXPRESS.JS** for backend development
+3) **POSTGRE SQL** for database
+4) [**Smart Brain API**](http://digital-jess.com/smart-brain.html) for image recognition
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
