@@ -1,0 +1,33 @@
+.logo-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--color-off-white__-1);
+    color: var(--color-black__-1);
+    border: 5px solid black;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+.logo-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-style: italic;
+    color: white;
+    transform: translateZ(60px);
+    height: 100%;
+    width: 100%;
+    background-image: url("../../res/img/logo.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.logo{
+    width: 80%;
+    height: 80%;
+}
