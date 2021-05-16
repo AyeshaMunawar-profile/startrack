@@ -1,13 +1,43 @@
+:root {
+    /*Color Palette */
+    --color-white: #f6f5f5;
+    --color-black: #0f130f;
+    /*Primary Color : Off White*/
+    --color-off-white__-1: #eeebdd;
+    --color-off-white__0: #e3e0cf;
+    --color-off-white__1: #c7c4ac;
+    /*Secondary Color : Green */
+    --color-muted-green__0: #c5d5cb;
+    --color-muted-green__1: #9fa8a3;
+    --color-green__0: #5b836d;
+    --color-green__1: #155049;
+    /*Accent Color : Black and Red */
+    --color-red__0: #810000;
+    --color-red__1: #630000;
+    --color-black__-1: #282727;
+    --color-black__0: #1b1717;
+    --color-black__1: #131010;
+    /*define the value of 1 rem i.e 1rem = 10px */
+    font-size: 62.5%;
+}
+
+:root,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: "Fira Code", BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: "Fira Code", BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
