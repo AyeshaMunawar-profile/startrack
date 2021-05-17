@@ -17,32 +17,48 @@ const particlesOptions = {
         "number": {
             "value": 150,
             "density": {
-                "value_area": 800,
-                "enable": true
-            },
-        },
-        "size": {
-            "value": 5
+                "enable": true,
+                "value_area": 1500
+            }
         },
         "color": {
-            "value": "#8cab98",
-            "opacity": 0.8
+            "value": "#ffe25d",
         },
         "line_linked": {
-            "color": {
-                "value": "#8cab98",
-                "opacity": 0.6
+            "enable": true,
+            "opacity": 0.05
+        },
+        "move": {
+            "direction": "random",
+            "speed": 0.8
+        },
+        "size": {
+            "value": 3
+        },
+        "opacity": {
+            "anim": {
+                "enable": true,
+                "speed": 3,
+                "opacity_min": 0.05
             }
-        }
+        },
+
     },
     "interactivity": {
         "events": {
-            "onhover": {
+            "onclick": {
                 "enable": true,
-                "mode": "repulse"
+                "mode": "push"
+            }
+        },
+        "modes": {
+            "push": {
+                "particles_nb": 1
             }
         }
-    }
+    },
+    "retina_detect": true,
+
 }
 
 class App extends Component {

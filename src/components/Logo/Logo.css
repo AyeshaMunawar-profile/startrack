@@ -3,14 +3,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 15rem;
-    height: 15rem;
-    background-color: var(--color-off-white__0);
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--color-black__1);
     color: var(--color-black__-1);
     border: 10px solid transparent;
-    border-radius: 20px;
+    border-radius: 50%;
     transform-style: preserve-3d;
     background-clip: content-box;
+    top: 10px;
 }
 
 .logo-img {
@@ -24,11 +25,12 @@
     transform: translateZ(60px);
     height: 100%;
     width: 100%;
-    background-image: url("../../res/img/logo.png");
+    background-image: url("../../res/img/star 192.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 70%;
     background-position: center;
-    border-radius: 20px;
+    border-radius: 50%;
+    padding: 5rem;
 }
 
 .logo {
@@ -37,5 +39,5 @@
 }
 
 .glare-wrapper {
-    border-radius: 10px !important;
+    border-radius: 50% !important;
 }
