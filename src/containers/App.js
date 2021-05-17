@@ -9,14 +9,25 @@ import './App.css';
 const particlesOptions = {
     "particles": {
         "number": {
-            "value": 200
+            "value": 150,
+            "density":{
+                "value_area": 800,
+                "enable": true
+            },
         },
         "size": {
             "value": 5
         },
         "color": {
-            "value": "#5b836d"
+            "value": "#8cab98",
+            "opacity": 0.8
         },
+        "line_linked":{
+            "color": {
+                "value": "#8cab98",
+                "opacity": 0.6
+            }
+        }
     },
     "interactivity": {
         "events": {
