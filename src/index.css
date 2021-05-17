@@ -12,6 +12,9 @@
     --color-green__-1: #8cab98;
     --color-green__0: #5b836d;
     --color-green__1: #155049;
+    --color-yellow__1: #ecb100;
+    --color-yellow__0: #f7b904;
+    --color-yellow__-1: #ffe25d;
     /*Accent Color : Black and Red */
     --color-red__0: #810000;
     --color-red__1: #630000;
@@ -36,7 +39,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(to right bottom, var(--color-muted-green__0), var(--color-off-white__1)) no-repeat center center fixed;
+    background: linear-gradient(to right bottom, var(--color-red__1), var(--color-black)) no-repeat center center fixed;
 }
 
 code {
@@ -96,6 +99,14 @@ button {
     color: var(--color-green__1);
 }
 
+.text-yellow__0 {
+    color: var(--color-yellow__0);
+}
+
+.text-yellow__-1 {
+    color: var(--color-yellow__-1);
+}
+
 .background-black {
     background-color: var(--color-black);
 }
@@ -143,4 +154,13 @@ button {
 .background-green__1 {
     background-color: var(--color-green__1);
 }
+
+.background-yellow__0 {
+    background-color: var(--color-yellow__0);
+}
+
+.background-yellow__-1 {
+    background-color: var(--color-yellow__-1);
+}
+
 
