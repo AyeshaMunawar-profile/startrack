@@ -7,12 +7,12 @@ const Logo = ()=>{
         <>
             <div className="logo-box ma4 mt0">
                 <Tilt className="logo-contents"
-                      perspective={500}
+                      perspective={350}
                       glareEnable={true}
-                      glareMaxOpacity={0.45}
+                      glareMaxOpacity={0.65}
                       scale={1.02}>
                     <div className="logo-img">
-                        {/*<img src="../../res/img/logo.svg" alt="Face value Logo" className="logo"/>*/}
+                        {/*<img src="../../res/img/logo.png" alt="Face value Logo" className="logo"/>*/}
                     </div>
                 </Tilt>
             </div>

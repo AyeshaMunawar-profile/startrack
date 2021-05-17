@@ -3,13 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20rem;
-    height: 20rem;
-    background-color: var(--color-off-white__-1);
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--color-off-white__0);
     color: var(--color-black__-1);
-    border: 5px solid black;
+    border: 10px solid transparent;
     border-radius: 20px;
     transform-style: preserve-3d;
+    background-clip: content-box;
 }
 .logo-img{
     display: flex;
@@ -26,8 +27,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border-radius: 20px;
 }
 .logo{
     width: 80%;
     height: 80%;
+}
+.glare-wrapper{
+    border-radius: 20px !important;
 }

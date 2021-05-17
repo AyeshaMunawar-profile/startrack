@@ -5,7 +5,7 @@ const Navigation = ()=>{
     return(
         <>
             <nav className="nav-bar">
-                <p className='f3 link dim underline pa4 pointer text-black'>
+                <p className='f2 link dim underline pa4 pointer text-black'>
                     Sign Out
                 </p>
             </nav>
