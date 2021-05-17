@@ -1,11 +1,12 @@
-# Face Value
+# Star Track
 
-Face value is a React app that allows a user to add an image by adding the url of the image and our app with the help of
-an image recognition API will detect and show if there are any faces in the image . This app has following features:
+Star Track is a React app that allows a user to add an image by adding the url of the image and our app with the help of
+an image recognition API will detect and show if there are any celebrity faces in the image and also tells us which celebrity it is .
+This app has following features:
 
 1) Sign-up and Login
 2) Add image to the app using its **URL**
-3) Detect any faces in the image using [**Smart Brain API**](http://digital-jess.com/smart-brain.html)
+3) Detect any celebrity face in the image using [**Clarifai API**](https://www.clarifai.com/)
 4) Show a rectangle around the faces being detected in the image
 5) Keep track of the number of times a user has used our app for face recognition
 
@@ -15,6 +16,10 @@ an image recognition API will detect and show if there are any faces in the imag
 2) **NODE.JS** and **EXPRESS.JS** for backend development
 3) **POSTGRE SQL** for database
 4) [**Smart Brain API**](http://digital-jess.com/smart-brain.html) for image recognition
+5) [**React Particles API**](https://www.npmjs.com/package/react-tsparticles) for showing particles in the background
+6) [**React Tilt API**](https://www.npmjs.com/package/react-tilt) for adding a 3d look (i.e glare , perspective etc.)
+   and animation related to rotation in 3d space to the logo
+7) [**Clarifai API**](https://www.clarifai.com/) for detecting the celebrity face from an image using the url of the image
 
 # Getting Started with Create React App
 
@@ -35,7 +40,8 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
+information.
 
 ### `npm run build`
 
@@ -51,38 +57,50 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will
+remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right
+into your project so you have full control over them. All of the commands except `eject` will still work, but they will
+point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you
+shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t
+customize it when you are ready for it.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more in
+the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This section has moved
+here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
 ### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This section has moved
+here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
 ### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This section has moved
+here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
 ### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This section has moved
+here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This section has moved
+here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved
+here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

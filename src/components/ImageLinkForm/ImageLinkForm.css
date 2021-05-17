@@ -25,4 +25,6 @@
 .btn-detect:active,
 .btn-detect:focus {
     background-color: var(--color-red__1);
+    border: none;
+    outline: none;
 }
