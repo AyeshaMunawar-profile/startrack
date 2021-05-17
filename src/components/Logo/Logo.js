@@ -2,10 +2,10 @@ import React from "react";
 import Tilt from "react-parallax-tilt";
 import './Logo.css';
 
-const Logo = ()=>{
-    return(
+const Logo = () => {
+    return (
         <>
-            <div className="logo-box ma4 mt0">
+            <div className="logo-box ma5 mt0">
                 <Tilt className="logo-contents"
                       perspective={350}
                       glareEnable={true}

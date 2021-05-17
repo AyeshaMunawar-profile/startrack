@@ -2,14 +2,43 @@ import React, {Component} from "react";
 import Navigation from "../components/Navigation/Navigation";
 import Logo from "../components/Logo/Logo";
 import ImageLinkForm from "../components/ImageLinkForm/ImageLinkForm";
+import Rank from "../components/Rank/Rank";
+import Particles from "react-particles-js";
+import './App.css';
+
+const particlesOptions = {
+    "particles": {
+        "number": {
+            "value": 200
+        },
+        "size": {
+            "value": 5
+        },
+        "color": {
+            "value": "#5b836d"
+        },
+    },
+    "interactivity": {
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            }
+        }
+    }
+}
+
 class App extends Component {
     render() {
         return (
             <>
                 <div className="App">
-                    <Navigation />
-                    <Logo />
-                    <ImageLinkForm />
+                    <Particles className='particles'
+                               params={particlesOptions}/>
+                    <Navigation/>
+                    <Logo/>
+                    <Rank/>
+                    <ImageLinkForm/>
                     {/*<FaceRecognition />*/}
                 </div>
             </>

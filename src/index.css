@@ -43,76 +43,103 @@ code {
     monospace;
 }
 
-.text-black{
+button {
+    cursor: pointer;
+}
+
+.text-black {
     color: var(--color-black);
 }
-.text-black__1{
+
+.text-black__1 {
     color: var(--color-black__1);
 }
-.text-black__-1{
+
+.text-black__-1 {
     color: var(--color-black__-1);
 }
-.text-red__0{
+
+.text-red__0 {
     color: var(--color-red__0);
 }
-.text-red__1{
+
+.text-red__1 {
     color: var(--color-red__1);
 }
-.text-off-white__0{
+
+.text-off-white__0 {
     color: var(--color-off-white__0);
 }
-.text-off-white__1{
+
+.text-off-white__1 {
     color: var(--color-off-white__1);
 }
-.text-off-white__-1{
+
+.text-off-white__-1 {
     color: var(--color-off-white__-1);
 }
-.text-muted-green__0{
+
+.text-muted-green__0 {
     color: var(--color-muted-green__0);
 }
-.text-muted-green__1{
+
+.text-muted-green__1 {
     color: var(--color-muted-green__1);
 }
-.text-green__0{
+
+.text-green__0 {
     color: var(--color-green__0);
 }
-.text-green__1{
+
+.text-green__1 {
     color: var(--color-green__1);
 }
-.background-black{
+
+.background-black {
     background-color: var(--color-black);
 }
-.background-black__1{
+
+.background-black__1 {
     background-color: var(--color-black__1);
 }
-.background-black__-1{
+
+.background-black__-1 {
     background-color: var(--color-black__-1);
 }
-.background-red__0{
+
+.background-red__0 {
     background-color: var(--color-red__0);
 }
-.background-red__1{
+
+.background-red__1 {
     background-color: var(--color-red__1);
 }
-.background-off-white__0{
+
+.background-off-white__0 {
     background-color: var(--color-off-white__0);
 }
-.background-off-white__1{
+
+.background-off-white__1 {
     background-color: var(--color-off-white__1);
 }
-.background-off-white__-1{
+
+.background-off-white__-1 {
     background-color: var(--color-off-white__-1);
 }
-.background-muted-green__0{
+
+.background-muted-green__0 {
     background-color: var(--color-muted-green__0);
 }
-.background-muted-green__1{
+
+.background-muted-green__1 {
     background-color: var(--color-muted-green__1);
 }
-.background-green__0{
+
+.background-green__0 {
     background-color: var(--color-green__0);
 }
-.background-green__1{
+
+.background-green__1 {
     background-color: var(--color-green__1);
 }
 

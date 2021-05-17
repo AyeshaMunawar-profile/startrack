@@ -20,8 +20,9 @@
 .btn-detect {
     border: none;
 }
+
 .btn-detect:hover,
 .btn-detect:active,
-.btn-detect:focus{
+.btn-detect:focus {
     background-color: var(--color-red__1);
 }
