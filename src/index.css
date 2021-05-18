@@ -1,26 +1,28 @@
 :root {
-    /*Color Palette */
+    /*Color Palette for Star Track*/
     --color-white: #f6f5f5;
     --color-black: #0f130f;
-    /*Primary Color : Off White*/
+    /*Primary Color : red*/
+    --color-red__0: #810000;
+    --color-red__1: #630000;
+    /*Neutral Color : Black and White and Grey */
     --color-off-white__-1: #eeebdd;
     --color-off-white__0: #e3e0cf;
     --color-off-white__1: #c7c4ac;
-    /*Secondary Color : Green */
-    --color-muted-green__0: #c5d5cb;
-    --color-muted-green__1: #9fa8a3;
-    --color-green__-1: #8cab98;
-    --color-green__0: #5b836d;
-    --color-green__1: #155049;
-    --color-yellow__1: #ecb100;
-    --color-yellow__0: #f7b904;
-    --color-yellow__-1: #ffe25d;
-    /*Accent Color : Black and Red */
-    --color-red__0: #810000;
-    --color-red__1: #630000;
+    --color-off-white__2: #9fa8a3;
     --color-black__-1: #282727;
     --color-black__0: #1b1717;
     --color-black__1: #131010;
+    /*Secondary Color : Green */
+    --color-green__-1: #8cab98;
+    --color-green__0: #5b836d;
+    --color-green__1: #155049;
+    /*Accent color : Yellow */
+    --color-yellow__1: #ecb100;
+    --color-yellow__0: #f7b904;
+    --color-yellow__-1: #ffe25d;
+
+
     /*define the value of 1 rem i.e 1rem = 10px */
     font-size: 62.5%;
 }
@@ -88,7 +90,7 @@ button {
 }
 
 .text-muted-green__1 {
-    color: var(--color-muted-green__1);
+    color: var(--color-off-white__2);
 }
 
 .text-green__0 {
@@ -144,7 +146,7 @@ button {
 }
 
 .background-muted-green__1 {
-    background-color: var(--color-muted-green__1);
+    background-color: var(--color-off-white__2);
 }
 
 .background-green__0 {
