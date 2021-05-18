@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Navigation from "../components/Navigation/Navigation";
-import Logo from "../components/Logo/Logo";
 import ImageLinkForm from "../components/ImageLinkForm/ImageLinkForm";
 import Rank from "../components/Rank/Rank";
 import FaceRecognition from "../components/FaceRecognition/FaceRecognition";
@@ -69,7 +68,8 @@ class App extends Component {
             url: '',
             input: '',
             celebrityName: {},
-            showCelebrityName: false
+            showCelebrityName: false,
+            showCelebrityPicture: false
         }
     }
 
@@ -79,14 +79,14 @@ class App extends Component {
         });
     }
 
-    onURLSubmit = (event) => {
-        console.log(event.target.value);
-        // this.setState({
-        //     url:
-        // })
-        faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, 'https://upload.wikimedia.org/wikipedia/commons/8/82/Damon_cropped.jpg')
+    predictCelebrity() {
+        faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, this.state.url)
             .then(response => console.log(response.outputs[0].data.regions[0].data.concepts[0].name))
             .catch(err => console.log(err));
+    }
+
+    onURLSubmit = (event) => {
+        this.setState({url: this.state.input}, this.predictCelebrity);
     }
 
     render() {
@@ -100,7 +100,10 @@ class App extends Component {
                     <ImageLinkForm
                         onSearchChange={this.onSearchChange}
                         onURLSubmit={this.onURLSubmit}/>
-                    <FaceRecognition/>
+                    <FaceRecognition
+                        imageUrl={this.state.url}
+                        showImage={this.state.showCelebrityPicture}
+                        showName={this.state.showCelebrityName}/>
                 </div>
             </>
         );
