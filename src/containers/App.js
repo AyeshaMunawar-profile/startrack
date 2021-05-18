@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation/Navigation";
 import Logo from "../components/Logo/Logo";
 import ImageLinkForm from "../components/ImageLinkForm/ImageLinkForm";
 import Rank from "../components/Rank/Rank";
+import FaceRecognition from "../components/FaceRecognition/FaceRecognition";
 import Particles from "react-particles-js";
 import Clarifai from 'clarifai'
 import './App.css';
@@ -76,8 +77,8 @@ class App extends Component {
         this.setState({
             input: event.target.value
         });
-        console.log(event.target.value);
     }
+
     onURLSubmit = (event) => {
         console.log(event.target.value);
         // this.setState({
@@ -95,12 +96,11 @@ class App extends Component {
                     <Particles className='particles'
                                params={particlesOptions}/>
                     <Navigation/>
-                    <Logo/>
                     <Rank/>
                     <ImageLinkForm
                         onSearchChange={this.onSearchChange}
                         onURLSubmit={this.onURLSubmit}/>
-                    {/*<FaceRecognition />*/}
+                    <FaceRecognition/>
                 </div>
             </>
         );
