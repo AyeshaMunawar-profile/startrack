@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20rem;
-    height: 20rem;
+    min-width: 15rem;
+    min-height: 15rem;
     background-color: var(--color-black__1);
     color: var(--color-black__-1);
     border: 10px solid transparent;
