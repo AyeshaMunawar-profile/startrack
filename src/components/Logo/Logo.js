@@ -12,7 +12,6 @@ const Logo = () => {
                       glareMaxOpacity={0.65}
                       scale={1.02}>
                     <div className="logo-img">
-                        {/*<img src="../../res/img/logo.png" alt="Face value Logo" className="logo"/>*/}
                     </div>
                 </Tilt>
             </div>
