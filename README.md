@@ -1,8 +1,8 @@
 # Star Track
 
 Star Track is a React app that allows a user to add an image by adding the url of the image and our app with the help of
-an image recognition API will detect and show if there are any celebrity faces in the image and also tells us which celebrity it is .
-This app has following features:
+an image recognition API will detect and show if there are any celebrity faces in the image and also tells us which
+celebrity it is . This app has following features:
 
 1) Sign-up and Login
 2) Add image to the app using its **URL**
@@ -19,7 +19,8 @@ This app has following features:
 5) [**React Particles API**](https://www.npmjs.com/package/react-tsparticles) for showing particles in the background
 6) [**React Tilt API**](https://www.npmjs.com/package/react-tilt) for adding a 3d look (i.e glare , perspective etc.)
    and animation related to rotation in 3d space to the logo
-7) [**Clarifai API**](https://www.clarifai.com/) for detecting the celebrity face from an image using the url of the image
+7) [**Clarifai API**](https://www.clarifai.com/) for detecting the celebrity face from an image using the url of the
+   image
 
 # Getting Started with Create React App
 
