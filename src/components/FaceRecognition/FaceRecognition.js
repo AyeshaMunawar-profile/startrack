@@ -1,17 +1,55 @@
 import React, {useState} from "react";
 
 const FaceRecognition = ({imageUrl}) => {
-    const [img, imgSet] = useState(imageUrl && imageUrl);
+    const defaultPath = "errorbackground.jpg";
+    const [img, imgSet] = useState(defaultPath);
+    const [isValid, setValid] = useState(false);
+    const [showImage, setShowImage] = useState(false);
+
     React.useLayoutEffect(() => {
-        if (imageUrl) {
-            imgSet(imageUrl)
+        const checkImage = async () => {
+            try {
+                const imageValid = await isImageValid(imageUrl)
+                if (imageValid) {
+                    imgSet(imageUrl);
+                    setValid(true);
+                    setShowImage(true);
+                } else {
+                    setDefaultImageSettings();
+                }
+            } catch (err) {
+                setDefaultImageSettings();
+            }
         }
-    }, [imageUrl])
+        if (imageUrl && imageUrl) {
+            checkImage();
+        }
+    }, [imageUrl, isValid, showImage])
+
+    const setDefaultImageSettings = () => {
+        imgSet(defaultPath);
+        setValid(false);
+        setShowImage(false);
+    }
+    const isImageValid = async (imgUrl) => {
+        let isValid = false;
+        try {
+            await fetch(imgUrl && imgUrl).then(response => {
+                isValid = response && response.ok && (response.type === "cors")
+            }).catch(() => {
+                isValid = false;
+            })
+        } catch {
+            isValid = false;
+        }
+        return isValid;
+    }
 
     return (
         <>
             <div className="face-recognition center pa5 mt5">
-                <img src={img} alt="celebrity pic"/>
+                <img src={img}
+                     alt="celebrity pic"/>
             </div>
         </>
     );

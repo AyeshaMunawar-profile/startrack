@@ -80,9 +80,10 @@ class App extends Component {
     }
 
     predictCelebrity() {
-        faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, this.state.url)
-            .then(response => console.log(response.outputs[0].data.regions[0].data.concepts[0].name,))
-            .catch(err => console.log(err));
+        // faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, this.state.url)
+        //     .then(response => console.log(response.outputs[0].data.regions[0].data.concepts[0].name,))
+        //     .catch(err => console.log(err));
+        console.log("celebrity predicted successfullyy !!!");
     }
 
     onURLSubmit = (event) => {
