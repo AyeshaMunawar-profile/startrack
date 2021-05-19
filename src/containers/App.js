@@ -81,7 +81,7 @@ class App extends Component {
 
     predictCelebrity() {
         faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, this.state.url)
-            .then(response => console.log(response.outputs[0].data.regions[0].data.concepts[0].name))
+            .then(response => console.log(response.outputs[0].data.regions[0].data.concepts[0].name,))
             .catch(err => console.log(err));
     }
 
@@ -101,7 +101,7 @@ class App extends Component {
                         onSearchChange={this.onSearchChange}
                         onURLSubmit={this.onURLSubmit}/>
                     <FaceRecognition
-                        imageUrl={this.state.url}
+                        imageUrl={this.state.url && this.state.url}
                         showImage={this.state.showCelebrityPicture}
                         showName={this.state.showCelebrityName}/>
                 </div>
