@@ -101,6 +101,7 @@ class App extends Component {
                     <ImageLinkForm
                         onSearchChange={this.onSearchChange}
                         onURLSubmit={this.onURLSubmit}/>
+
                     <FaceRecognition
                         imageUrl={this.state.url && this.state.url}
                         showImage={this.state.showCelebrityPicture}
