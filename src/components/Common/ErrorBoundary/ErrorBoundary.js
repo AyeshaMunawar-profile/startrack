@@ -5,7 +5,6 @@ class ErrorBoundary extends Component {
         super(props);
         this.state = {
             hasError: false,
-            errorMessage: "Ooops! something went wrong"
         }
     }
 
@@ -19,7 +18,7 @@ class ErrorBoundary extends Component {
             return (
                 <>
                     <div className="error-boundary">
-
+                        <h1 className="f2 text-white">Oops! something went wrong</h1>
                     </div>
                 </>
             )

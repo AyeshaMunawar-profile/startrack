@@ -3,11 +3,11 @@ import React from "react";
 const Rank = () => {
     return (
         <>
-            <div>
-                <p className='text-yellow__-1 f3 f2-m ma3 f1-l tc mt6 '>
+            <div className="rank text-center m-5">
+                <p className='text-yellow__-1 fs-1'>
                     {`Ayehsa Munawar your current rank is ...`}
                 </p>
-                <p className='text-off-white__0 f2 f2-m ma3 f1-l tc b'>
+                <p className='text-off-white__0 fs-1'>
                     {'#' + 3}
                 </p>
             </div>

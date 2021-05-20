@@ -1,18 +1,21 @@
 import React from "react";
 import './Navigation.css';
 import Logo from "../Logo/Logo";
+import {Navbar, NavbarBrand, NavItem, NavLink} from 'reactstrap';
 
 const Navigation = () => {
     return (
         <>
-            <nav className="nav-bar">
-                <div className="pa4">
+            <Navbar className="nav-bar">
+                <NavbarBrand className="p-4">
                     <Logo/>
-                </div>
-                <p className='f2 link dim underline pa4 pointer text-off-white__0 pt6 pr5'>
-                    Sign Out
-                </p>
-            </nav>
+                </NavbarBrand>
+                <NavItem>
+                    <NavLink className='fs-1 pointer link-color-yellow__-1 p-4'>
+                        Sign Out
+                    </NavLink>
+                </NavItem>
+            </Navbar>
         </>
     );
 }

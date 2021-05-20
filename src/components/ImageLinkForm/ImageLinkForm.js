@@ -4,12 +4,13 @@ import './ImageLinkForm.css';
 const ImageLinkForm = ({onSearchChange, onURLSubmit}) => {
     return (
         <>
-            <div className="image-link-form mt6">
-                <p className="f2 f1-l form-title ma5 text-yellow__0">{'This app will detect faces in your pictures ... Take it at face value '}</p>
-                <div className="input-box w-70-l w-70-m w-80-ns center">
-                    <div className="pa5-l pa3-m pt4-m pb4-m pa1 pt3 pb3 br3 shadow-5 w-90-l w-90-m w-100">
-                        <input type='url' name="url" id='url' className='f4 pa3 w-70 ' onChange={onSearchChange}/>
-                        <button className="btn-detect w-30 grow f3 link ph3 pv3 dib text-off-white__0 background-red__0"
+            <div
+                className="image-link-form mt-5 d-flex flex-column flex-nowrap justify-content-center align-items-center">
+                <p className="fs-1 f-subheadline-m m5 text-yellow__0 text-center mb-5">{'This app will detect faces in your pictures ... Take it at face value '}</p>
+                <div className="input-box w-75 text-center shadow">
+                    <div className="p-4">
+                        <input type='url' name="url" id='url' className='fs-4 p-3 w-75' onChange={onSearchChange}/>
+                        <button className="btn-detect w-25 grow fs-3 link p-3 text-off-white__0 button-color-red__0"
                                 type='submit'
                                 onClick={onURLSubmit}>Detect
                         </button>

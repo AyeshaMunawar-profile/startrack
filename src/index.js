@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './containers/App';
-import 'tachyons';
+import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.render(
     <React.StrictMode>
