@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const FaceRecognition = ({imageUrl}) => {
+const FaceRecognition = ({imageUrl,celebrityName}) => {
     const [img, imgSet] = useState('');
     const [isValid, setValid] = useState(false);
 
@@ -46,9 +46,10 @@ const FaceRecognition = ({imageUrl}) => {
             <div className="face-recognition center p-5 mt-5">
                 {
                     isValid ?
-                        <div className="celebrity-image">
+                        <div className="celebrity-image text-center text-white">
+                            <h1 className="celebrity-name fs-1 mb-5">{celebrityName? celebrityName.toString().toUpperCase():"Searching ..."}</h1>
                             <img src={img}
-                                 alt="celebrity pic" className="img-fluid img-celebrity"/>
+                                 alt="celebrity pic" className="mt-5 img-fluid img-celebrity"/>
                         </div>
                         : <div className="error-box p-3 m-3">
                             <h1 className="fs-1 text-off-white__0">Image not found</h1>
