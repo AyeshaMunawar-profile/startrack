@@ -1,10 +1,8 @@
 import React, {useState} from "react";
 
 const FaceRecognition = ({imageUrl}) => {
-    const defaultPath = "errorbackground.jpg";
-    const [img, imgSet] = useState(defaultPath);
+    const [img, imgSet] = useState('');
     const [isValid, setValid] = useState(false);
-    const [showImage, setShowImage] = useState(false);
 
     React.useLayoutEffect(() => {
         const checkImage = async () => {
@@ -13,7 +11,6 @@ const FaceRecognition = ({imageUrl}) => {
                 if (imageValid) {
                     imgSet(imageUrl);
                     setValid(true);
-                    setShowImage(true);
                 } else {
                     setDefaultImageSettings();
                 }
@@ -24,12 +21,11 @@ const FaceRecognition = ({imageUrl}) => {
         if (imageUrl && imageUrl) {
             checkImage();
         }
-    }, [imageUrl, isValid, showImage])
+    }, [imageUrl, isValid])
 
     const setDefaultImageSettings = () => {
-        imgSet(defaultPath);
+        imgSet('');
         setValid(false);
-        setShowImage(false);
     }
     const isImageValid = async (imgUrl) => {
         let isValid = false;
@@ -47,9 +43,17 @@ const FaceRecognition = ({imageUrl}) => {
 
     return (
         <>
-            <div className="face-recognition center pa5 mt5">
-                <img src={img}
-                     alt="celebrity pic"/>
+            <div className="face-recognition center p-5 mt-5">
+                {
+                    isValid ?
+                        <div className="celebrity-image">
+                            <img src={img}
+                                 alt="celebrity pic"/>
+                        </div>
+                        : <div className="error-box pa3 ma3">
+                            <h1 className="f1 text-off-white__0">Image not found</h1>
+                        </div>
+                }
             </div>
         </>
     );

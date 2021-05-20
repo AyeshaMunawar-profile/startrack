@@ -6,6 +6,7 @@ import FaceRecognition from "../components/FaceRecognition/FaceRecognition";
 import Particles from "react-particles-js";
 import Clarifai from 'clarifai'
 import './App.css';
+import ErrorBoundary from "../components/Common/ErrorBoundary/ErrorBoundary";
 
 const API_KEY = "e92c295461a84c32b581166305a711f3";
 
@@ -102,10 +103,12 @@ class App extends Component {
                         onSearchChange={this.onSearchChange}
                         onURLSubmit={this.onURLSubmit}/>
 
-                    <FaceRecognition
-                        imageUrl={this.state.url && this.state.url}
-                        showImage={this.state.showCelebrityPicture}
-                        showName={this.state.showCelebrityName}/>
+                    <ErrorBoundary>
+                        <FaceRecognition
+                            imageUrl={this.state.url && this.state.url}
+                            showImage={this.state.showCelebrityPicture}
+                            showName={this.state.showCelebrityName}/>
+                    </ErrorBoundary>
                 </div>
             </>
         );
