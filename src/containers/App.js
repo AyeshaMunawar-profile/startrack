@@ -68,9 +68,7 @@ class App extends Component {
         this.state = {
             url: '',
             input: '',
-            celebrityName: {},
-            showCelebrityName: false,
-            showCelebrityPicture: false
+            celebrityName: {}
         }
     }
 
@@ -81,7 +79,7 @@ class App extends Component {
     }
 
     predictCelebrity() {
-        // faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, this.state.url)
+        // faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, this.state.input)
         //     .then(response => console.log(response.outputs[0].data.regions[0].data.concepts[0].name,))
         //     .catch(err => console.log(err));
         console.log("celebrity predicted successfullyy !!!");
@@ -105,9 +103,8 @@ class App extends Component {
 
                     <ErrorBoundary>
                         <FaceRecognition
-                            imageUrl={this.state.url && this.state.url}
-                            showImage={this.state.showCelebrityPicture}
-                            showName={this.state.showCelebrityName}/>
+                            imageUrl={this.state.input && this.state.input}
+                        />
                     </ErrorBoundary>
                 </div>
             </>
