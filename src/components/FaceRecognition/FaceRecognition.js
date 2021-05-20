@@ -30,7 +30,7 @@ const FaceRecognition = ({imageUrl}) => {
     const isImageValid = async (imgUrl) => {
         let isValid = false;
         try {
-            await fetch(imgUrl && imgUrl).then(response => {
+            await fetch(imgUrl && imgUrl, {credentials:'same-origin'}).then(response => {
                 isValid = response && response.ok && (response.type === "cors")
             }).catch(() => {
                 isValid = false;
@@ -48,10 +48,10 @@ const FaceRecognition = ({imageUrl}) => {
                     isValid ?
                         <div className="celebrity-image">
                             <img src={img}
-                                 alt="celebrity pic"/>
+                                 alt="celebrity pic" className="img-fluid img-celebrity"/>
                         </div>
-                        : <div className="error-box pa3 ma3">
-                            <h1 className="f1 text-off-white__0">Image not found</h1>
+                        : <div className="error-box p-3 m-3">
+                            <h1 className="fs-1 text-off-white__0">Image not found</h1>
                         </div>
                 }
             </div>
