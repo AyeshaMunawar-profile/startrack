@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import './FaceRecognition.css'
 
 const FaceRecognition = ({imageUrl, celebrityName}) => {
     const [img, imgSet] = useState('');
@@ -50,12 +51,15 @@ const FaceRecognition = ({imageUrl, celebrityName}) => {
                 {
                     isValid && img ?
                         <div className="celebrity-image text-center text-white">
-                            <h1 className="celebrity-name fs-1 mb-5">{celebrityName ? celebrityName.toString().toUpperCase() : "Searching ..."}</h1>
+                            <h1 className="celebrity-name fs-1 mb-5 fw-normal">{celebrityName ? celebrityName.toString().toUpperCase() : "Searching ..."}</h1>
                             <img src={img}
-                                 alt="celebrity pic" className="mt-5 img-fluid img-celebrity"/>
+                                 alt="celebrity pic"
+                                 className="mt-5 img-fluid img-celebrity "
+                                 id="celebrity-image"
+                            />
                         </div>
                         : <div className="error-box p-3 m-3">
-                            <h1 className="fs-1 text-off-white__0">{img ? "Image not found" : ""}</h1>
+                            <h1 className="fs-2 text-off-white__1 fw-normal error-message">{img ? "Ooops! Image not found" : ""}</h1>
                         </div>
                 }
             </div>
