@@ -22,6 +22,7 @@ celebrity it is . This app has following features:
 6) [**Clarifai API**](https://www.clarifai.com/) for detecting the celebrity face from an image using the url of the
    image
 7) Use [**Reactstrap**](https://reactstrap.github.io/) and [**Bootstrap**](https://getbootstrap.com/) for UI 
+8) Use [**React Axios**](https://www.npmjs.com/package/axios) A promise based HTTP client for the browser and node.js
    
 
 # Getting Started with Create React App

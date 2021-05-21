@@ -68,7 +68,7 @@ class App extends Component {
         this.state = {
             url: '',
             input: '',
-            celebrityName: ''
+            celebrityName: '',
         }
     }
 
@@ -79,14 +79,14 @@ class App extends Component {
     }
 
     predictCelebrity() {
-        faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, this.state.input)
-            .then(response => {
-                const name = response.outputs[0].data.regions[0].data.concepts[0].name;
-                console.log("My guess is ... :", name)
-                this.setState({celebrityName: name});
-            })
-            .catch(err => console.log("Ooops something went wrong !"));
-        console.log("celebrity predicted successfullyy !!!");
+        // faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, this.state.input)
+        //     .then(response => {
+        //         const name = response.outputs[0].data.regions[0].data.concepts[0].name;
+        //         console.log("My guess is ... :", name)
+        //         this.setState({celebrityName: name});
+        //     })
+        //     .catch(err => console.log("Ooops something went wrong !"));
+        console.log("celebrity predicted successfully !!!");
     }
 
     onURLSubmit = (event) => {

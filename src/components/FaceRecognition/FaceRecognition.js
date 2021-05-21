@@ -1,6 +1,7 @@
 import React, {useState} from "react";
+import axios from "axios";
 
-const FaceRecognition = ({imageUrl,celebrityName}) => {
+const FaceRecognition = ({imageUrl, celebrityName}) => {
     const [img, imgSet] = useState('');
     const [isValid, setValid] = useState(false);
 
@@ -10,7 +11,7 @@ const FaceRecognition = ({imageUrl,celebrityName}) => {
                 const imageValid = await isImageValid(imageUrl)
                 if (imageValid) {
                     imgSet(imageUrl);
-                    setValid(true);
+                    setValid(imageValid);
                 } else {
                     setDefaultImageSettings();
                 }
@@ -24,40 +25,42 @@ const FaceRecognition = ({imageUrl,celebrityName}) => {
     }, [imageUrl, isValid])
 
     const setDefaultImageSettings = () => {
-        imgSet('');
         setValid(false);
     }
     const isImageValid = async (imgUrl) => {
-        let isValid = false;
+        let isImageValid = false;
         try {
-            await fetch(imgUrl && imgUrl, {credentials:'same-origin'}).then(response => {
-                isValid = response && response.ok && (response.type === "cors")
-            }).catch(() => {
-                isValid = false;
-            })
-        } catch {
-            isValid = false;
+            const response = await axios.get(imgUrl,
+                {
+                    headers: {}
+                })
+            if (response) {
+                isImageValid = response && (response.data && response.status === 200);
+            }
+        } catch (error) {
+            console.error("Image no found" + error);
+            isImageValid = false;
         }
-        return isValid;
+        return isImageValid;
     }
 
     return (
         <>
             <div className="face-recognition center p-5 mt-5">
                 {
-                    isValid ?
+                    isValid && img ?
                         <div className="celebrity-image text-center text-white">
-                            <h1 className="celebrity-name fs-1 mb-5">{celebrityName? celebrityName.toString().toUpperCase():"Searching ..."}</h1>
+                            <h1 className="celebrity-name fs-1 mb-5">{celebrityName ? celebrityName.toString().toUpperCase() : "Searching ..."}</h1>
                             <img src={img}
                                  alt="celebrity pic" className="mt-5 img-fluid img-celebrity"/>
                         </div>
                         : <div className="error-box p-3 m-3">
-                            <h1 className="fs-1 text-off-white__0">Image not found</h1>
+                            <h1 className="fs-1 text-off-white__0">{img ? "Image not found" : ""}</h1>
                         </div>
                 }
             </div>
         </>
-    );
+    )
 }
 
 export default FaceRecognition;
