@@ -1,0 +1,12 @@
+.celebrity-image {
+    position: relative;
+}
+
+.bounding-box {
+    position: absolute;
+    box-shadow: 0 0 0 3px var(--color-red__0) inset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+}
