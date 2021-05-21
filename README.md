@@ -6,7 +6,7 @@ celebrity it is . This app has following features:
 
 1) Sign-up and Login
 2) Add image to the app using its **URL**
-3) Do **input validation** on the URL using fetch API 
+3) Do **input validation** on the URL using fetch API
 4) Detect any celebrity face in the image using [**Clarifai API**](https://www.clarifai.com/)
 5) Show a rectangle around the faces being detected in the image
 6) Keep track of the number of times a user has used our app for face recognition
@@ -21,9 +21,8 @@ celebrity it is . This app has following features:
    and animation related to rotation in 3d space to the logo
 6) [**Clarifai API**](https://www.clarifai.com/) for detecting the celebrity face from an image using the url of the
    image
-7) Use [**Reactstrap**](https://reactstrap.github.io/) and [**Bootstrap**](https://getbootstrap.com/) for UI 
+7) Use [**Reactstrap**](https://reactstrap.github.io/) and [**Bootstrap**](https://getbootstrap.com/) for UI
 8) Use [**React Axios**](https://www.npmjs.com/package/axios) A promise based HTTP client for the browser and node.js
-   
 
 # Getting Started with Create React App
 

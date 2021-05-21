@@ -10,3 +10,9 @@
     justify-content: center;
     cursor: pointer;
 }
+
+.celebrity-name,
+.error-message {
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}

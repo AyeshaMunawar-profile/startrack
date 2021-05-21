@@ -69,6 +69,7 @@ class App extends Component {
             url: '',
             input: '',
             celebrityName: '',
+            box: {}
         }
     }
 
@@ -78,14 +79,42 @@ class App extends Component {
         });
     }
 
+    calculateBoundingBoxDimensions = (data) => {
+        const boundingBox = data.outputs[0].data.regions[0].region_info.bounding_box;
+        const image = document.getElementById("celebrity-image");
+        const width = image.offsetWidth;
+        const height = image.offsetHeight;
+        if (boundingBox && image) {
+            return {
+                // the Calarafai API returns the dimensions of the
+                // bounding box in the form of percentages
+                // we need to convert the percentages into the
+                // dimensions relative to the image's width and height
+                leftColumn: boundingBox.left_col * width,
+                topRow: boundingBox.top_row * height,
+                rightColumn: width - (boundingBox.right_col * width),
+                bottomRow: height - (boundingBox.bottom_row * height)
+            }
+        }
+
+    }
+
+    displayBoundingBox = (box) => {
+        console.log(box);
+        this.setState({box: box});
+    }
+
     predictCelebrity() {
-        // faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, this.state.input)
-        //     .then(response => {
-        //         const name = response.outputs[0].data.regions[0].data.concepts[0].name;
-        //         console.log("My guess is ... :", name)
-        //         this.setState({celebrityName: name});
-        //     })
-        //     .catch(err => console.log("Ooops something went wrong !"));
+        faceRecognitionApp.models.predict(Clarifai.CELEBRITY_MODEL, this.state.input)
+            .then(response => {
+                this.displayBoundingBox(this.calculateBoundingBoxDimensions(response));
+                const name = response.outputs[0].data.regions[0].data.concepts[0].name;
+                if (name) {
+                    console.log("My guess is ... :", name)
+                    this.setState({celebrityName: name});
+                }
+            })
+            .catch(err => console.log("Ooops! something went wrong !"));
         console.log("celebrity predicted successfully !!!");
     }
 
