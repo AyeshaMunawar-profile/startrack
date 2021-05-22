@@ -7,6 +7,7 @@ import Particles from "react-particles-js";
 import Clarifai from 'clarifai'
 import './App.css';
 import ErrorBoundary from "../components/Common/ErrorBoundary/ErrorBoundary";
+import SignInForm from "../components/SignInForm/SignInForm";
 
 const API_KEY = "e92c295461a84c32b581166305a711f3";
 
@@ -129,6 +130,7 @@ class App extends Component {
                     <Particles className='particles'
                                params={particlesOptions}/>
                     <Navigation/>
+                    <SignInForm/>
                     <Rank/>
                     <ImageLinkForm
                         onSearchChange={this.onSearchChange}
@@ -138,6 +140,7 @@ class App extends Component {
                         <FaceRecognition
                             imageUrl={this.state.input && this.state.input}
                             celebrityName={this.state.celebrityName}
+                            box={this.state.box}
                         />
                     </ErrorBoundary>
                 </div>
