@@ -22,7 +22,10 @@
     --color-yellow__0: #f7b904;
     --color-yellow__-1: #ffe25d;
 
+    --box-shadow__yellow: rgba(255, 226, 93, 0.7);
+    --box-shadow__black: rgba(0, 0, 0, 0.7);
 
+    --red-transparent: rgba(129, 0, 0, 0.6);
     /*define the value of 1 rem i.e 1rem = 10px */
     font-size: 62.5%;
 }
@@ -128,7 +131,7 @@ button {
     border: none !important;
     background-color: var(--color-red__0) !important;
     color: var(--color-white);
-    box-shadow: 0 0 3px var(--color-black) 0.5;
+    box-shadow: 0 0 10px var(--box-shadow__black) !important;
     transition: all 0.5s ease-in-out;
 }
 
@@ -139,7 +142,26 @@ button {
     color: var(--color-white);
     border: none;
     outline: none;
-    box-shadow: 0 0 3px var(--color-black) !important;
+    box-shadow: 0 0 5px var(--box-shadow__black) !important;
+    transform: translateY(1px);
+}
+
+.button-color-yellow__0 {
+    border: none !important;
+    background-color: var(--color-yellow__0) !important;
+    color: var(--color-black__0) !important;
+    box-shadow: 0 0 10px var(--box-shadow__black) !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.button-color-yellow__0:hover,
+.button-color-yellow__0:active,
+.button-color-yellow__0:focus {
+    background-color: var(--color-yellow__1) !important;
+    color: var(--color-black__1) !important;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px var(--box-shadow__black) !important;
     transform: translateY(1px);
 }
 
@@ -217,4 +239,14 @@ button {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-red__1)
+}
+
+
+/*forms*/
+.form {
+    border-radius: 1rem;
+}
+
+.form-transparent {
+    background-color: var(--red-transparent);
 }
