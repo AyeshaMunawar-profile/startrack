@@ -10,7 +10,7 @@ const Navigation = () => {
                 <NavbarBrand className="p-4">
                     <Logo/>
                 </NavbarBrand>
-                <NavItem>
+                <NavItem className="me-4">
                     <NavLink className='fs-1 pointer link-color-yellow__-1 p-4'>
                         Sign Out
                     </NavLink>

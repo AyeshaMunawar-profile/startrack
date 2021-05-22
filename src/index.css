@@ -125,8 +125,11 @@ button {
 }
 
 .button-color-red__0 {
+    border: none !important;
     background-color: var(--color-red__0) !important;
     color: var(--color-white);
+    box-shadow: 0 0 3px var(--color-black) 0.5;
+    transition: all 0.5s ease-in-out;
 }
 
 .button-color-red__0:hover,
@@ -134,6 +137,10 @@ button {
 .button-color-red__0:focus {
     background-color: var(--color-red__1) !important;
     color: var(--color-white);
+    border: none;
+    outline: none;
+    box-shadow: 0 0 3px var(--color-black) !important;
+    transform: translateY(1px);
 }
 
 /*Backgrounds*/

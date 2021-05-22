@@ -1,0 +1,4 @@
+.form-check-input:checked {
+    background-color: var(--color-red__0);
+    border-color: var(--color-red__1);
+}
