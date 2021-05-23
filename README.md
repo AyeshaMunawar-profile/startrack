@@ -4,25 +4,25 @@ Star Track is a React app that allows a user to add an image by adding the url o
 an image recognition API will detect and show if there are any celebrity faces in the image and also tells us which
 celebrity it is . This app has following features:
 
-1) Sign-up and Login
-2) Add image to the app using its **URL**
-3) Do **input validation** on the URL using fetch API
-4) Detect any celebrity face in the image using [**Clarifai API**](https://www.clarifai.com/)
-5) Show a rectangle around the faces being detected in the image
-6) Keep track of the number of times a user has used our app for face recognition
+1. Sign-up and Login
+2. Add image to the app using its **URL**
+3. Do **input validation** on the URL using fetch API
+4. Detect any celebrity face in the image using [**Clarifai API**](https://www.clarifai.com/)
+5. Show a rectangle around the faces being detected in the image
+6. Keep track of the number of times a user has used our app for face recognition
 
 # Technologies used
 
-1) [**REACT.JS**](https://reactjs.org/) for front end development
-2) **NODE.JS** and **EXPRESS.JS** for backend development
-3) **POSTGRE SQL** for database
-4) [**React Particles API**](https://www.npmjs.com/package/react-tsparticles) for showing particles in the background
-5) [**React Tilt API**](https://www.npmjs.com/package/react-tilt) for adding a 3d look (i.e glare , perspective etc.)
+1. [**REACT.JS**](https://reactjs.org/) for front end development
+2. **NODE.JS** and **EXPRESS.JS** for backend development
+3. **POSTGRE SQL** for database
+4. [**React Particles API**](https://www.npmjs.com/package/react-tsparticles) for showing particles in the background
+5. [**React Tilt API**](https://www.npmjs.com/package/react-tilt) for adding a 3d look (i.e glare , perspective etc.)
    and animation related to rotation in 3d space to the logo
-6) [**Clarifai API**](https://www.clarifai.com/) for detecting the celebrity face from an image using the url of the
+6. [**Clarifai API**](https://www.clarifai.com/) for detecting the celebrity face from an image using the url of the
    image
-7) Use [**Reactstrap**](https://reactstrap.github.io/) and [**Bootstrap**](https://getbootstrap.com/) for UI
-8) Use [**React Axios**](https://www.npmjs.com/package/axios) A promise based HTTP client for the browser and node.js
+7. Use [**Reactstrap**](https://reactstrap.github.io/) and [**Bootstrap**](https://getbootstrap.com/) for UI
+8. Use [**React Axios**](https://www.npmjs.com/package/axios) A promise based HTTP client for the browser and node.js
 
 # Getting Started with Create React App
 
