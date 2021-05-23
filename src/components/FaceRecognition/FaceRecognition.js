@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import './FaceRecognition.css'
 
-const FaceRecognition = ({imageUrl, celebrityName, box}) => {
+const FaceRecognition = ({ imageUrl, celebrityName, box }) => {
     const [img, imgSet] = useState('');
     const [isValid, setValid] = useState(false);
 
@@ -54,17 +54,17 @@ const FaceRecognition = ({imageUrl, celebrityName, box}) => {
                             <h1 className="celebrity-name fs-1 mb-5 fw-normal">{celebrityName ? celebrityName.toString().toUpperCase() : "Searching ..."}</h1>
                             <div className="image-box">
                                 <img src={img}
-                                     alt="celebrity-pic"
-                                     className="mt-5 img-fluid img-celebrity "
-                                     id="celebrity-image"
+                                    alt="celebrity-pic"
+                                    className="mt-5 img-fluid img-celebrity "
+                                    id="celebrity-image"
                                 />
                                 {box &&
-                                <div className="bounding-box" style={{
-                                    top: box.topRow,
-                                    right: box.rightColumn,
-                                    bottom: box.bottomRow,
-                                    left: box.leftColumn
-                                }}/>
+                                    <div className="bounding-box" style={{
+                                        top: box.topRow,
+                                        right: box.rightColumn,
+                                        bottom: box.bottomRow,
+                                        left: box.leftColumn
+                                    }} />
                                 }
                             </div>
                         </div>
