@@ -1,0 +1,42 @@
+.sign-up-form {
+  padding-top: 10rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--color-red__0);
+  border-color: var(--color-red__1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker {
+  border: none !important;
+  box-shadow: 0 0 6px var(--box-shadow__black);
+}
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  display: block;
+  width: 100%;
+}
+
+.react-datepicker__header {
+  background-color: var(--color-yellow__0) !important;
+}
+.react-datepicker__navigation--previous {
+  border-right-color: var(--color-black) !important;
+}
+.react-datepicker__navigation--next {
+  border-left-color: var(--color-black) !important;
+}
+.react-datepicker__day--selected {
+  background-color: var(--color-red__0) !important;
+}
