@@ -11,13 +11,13 @@ const SignInForm = ({ onRouteChange }) => {
                         <h1 className="fs-1 text-yellow__0 mb-5 mt-3">Sign In</h1>
                     </FormText>
                     <FormGroup className={"column-right w-100 mt-3"}>
-                        <Label for={"email"} className={"pe-5 fs-3"}>Email Address</Label>
+                        <Label htmlFor={"email"} className={"pe-5 fs-3"}>Email Address</Label>
                         <input className={"rounded-1 border-0 px-5 ps-3 fs-3 py-3 input "} name={"email"} type={"email"}
                             id={"sign-in-email"}
                             placeholder={"example@domain.com"} />
                     </FormGroup>
                     <FormGroup className={"column-right w-100"}>
-                        <Label for={"password"} className={"pe-5 fs-3"}>Password</Label>
+                        <Label htmlFor={"password"} className={"pe-5 fs-3"}>Password</Label>
                         <input name={"password"} type={"password"} id={"sign-in-password"} placeholder={""}
                             className={"rounded-1 border-0 px-5 ps-3 fs-3 py-3 input"} />
                     </FormGroup>
