@@ -11,7 +11,7 @@ const ImageLinkForm = ({ onSearchChange, onURLSubmit }) => {
                     <div className="p-4">
                         <input type='url' name="url" id='url' className='fs-4 p-3 w-75 input' onChange={onSearchChange}
                             placeholder={"Enter URL"} />
-                        <button className="btn-detect w-25 grow fs-3 link p-3 text-off-white__0 button-color-red__0"
+                        <button className="btn-detect w-25 grow fs-4 link p-3 text-off-white__0 button-color-red__0"
                             type='submit'
                             onClick={onURLSubmit}>Detect
                         </button>

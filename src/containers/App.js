@@ -70,6 +70,7 @@ class App extends Component {
             input: "",
             celebrityName: "",
             box: {},
+            route: "sign-up"
         };
     }
 
@@ -123,26 +124,35 @@ class App extends Component {
         this.setState({ url: this.state.input }, this.predictCelebrity);
     };
 
+    onRouteChange = (route) => {
+        this.setState({route : route});
+    }
+
     render() {
         return (
             <>
                 <div className="App">
                     <Particles className="particles" params={particlesOptions} />{" "}
-                    <Navigation />
-                    <SignInForm />
-                    <RegistrationForm />
-                    <Rank />
-                    <ImageLinkForm
-                        onSearchChange={this.onSearchChange}
-                        onURLSubmit={this.onURLSubmit}
-                    />{" "}
-                    <ErrorBoundary>
-                        <FaceRecognition
-                            imageUrl={this.state.input && this.state.input}
-                            celebrityName={this.state.celebrityName}
-                            box={this.state.box}
-                        />{" "}
-                    </ErrorBoundary>{" "}
+                    <Navigation onRouteChange={this.onRouteChange} route={this.state.route}/>
+                    {this.state.route === "sign-in" ?
+                        <SignInForm onRouteChange={this.onRouteChange} />
+                        : this.state.route === "sign-up" ?
+                            <RegistrationForm /> :
+                            <div>
+                                <Rank />
+                                <ImageLinkForm
+                                    onSearchChange={this.onSearchChange}
+                                    onURLSubmit={this.onURLSubmit}
+                                />{" "}
+                                <ErrorBoundary>
+                                    <FaceRecognition
+                                        imageUrl={this.state.input && this.state.input}
+                                        celebrityName={this.state.celebrityName}
+                                        box={this.state.box}
+                                    />{" "}
+                                </ErrorBoundary>{" "}
+                            </div>
+                    }
                 </div>{" "}
             </>
         );
