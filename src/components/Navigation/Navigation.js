@@ -15,14 +15,18 @@ const Navigation = ({ onRouteChange, route }) => {
                         <NavLink className='fs-1 pointer link-color-yellow__-1 p-4'
                             onClick={() => onRouteChange("sign-in")}>
                             Sign Out
-                    </NavLink>
+                        </NavLink>
                     </NavItem> :
-                    <div>
+                    <div className="row-space-between">
                         <NavItem className="me-4">
-                            <NavLink className='display-4 pointer link-color-yellow__-1 p-4'
-                            >
-                                STAR TRACK
-                    </NavLink>
+                            <NavLink className='fs-1 pointer link-color-yellow__-1 p-4' onClick={() => onRouteChange("sign-in")}>
+                                Sign In
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="me-4">
+                            <NavLink className='fs-1 pointer link-color-yellow__-1 p-4' onClick={() => onRouteChange("sign-up")}>
+                                Sign Up
+                            </NavLink>
                         </NavItem>
                     </div>
                 }

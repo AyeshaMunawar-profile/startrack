@@ -12,7 +12,7 @@ const RegistrationForm = ({ onRouteChange }) => {
                 <Form className="text-off-white__0 fs-2 form form-transparent px-5 py-5 shadow sign-up-form-contents">
 
                     <FormText>
-                        <h1 className="fs-1 text-yellow__0 mb-5 mt-4">Registration Form</h1>
+                        <h1 className="fs-1 text-yellow__0 mb-5 mt-4">Sign Up</h1>
                     </FormText>
 
                     <FormGroup className={"mt-5 row-space-between"}>
@@ -70,7 +70,8 @@ const RegistrationForm = ({ onRouteChange }) => {
 
                     <Button type={"submit"}
                         className={"button-color-yellow__0 text-off-white__0 px-5 py-3 center fs-3 btn-sign-up"}
-                        onClick={() => onRouteChange("home")}>Sign-up</Button>
+                        onClick={() => onRouteChange("home")}
+                        value="sign-up">Sign-up</Button>
                 </Form>
             </div>
         </>
