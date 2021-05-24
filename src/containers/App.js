@@ -10,11 +10,14 @@ import ErrorBoundary from "../components/Common/ErrorBoundary/ErrorBoundary";
 import SignInForm from "../components/SignInForm/SignInForm";
 import RegistrationForm from "../components/RegistrationForm/RegistrationForm";
 
-const API_KEY = "e92c295461a84c32b581166305a711f3";
 
+
+const API_KEY = "e92c295461a84c32b581166305a711f3";
 const faceRecognitionApp = new Clarifai.App({
     apiKey: API_KEY,
 });
+
+
 const particlesOptions = {
     particles: {
         number: {
