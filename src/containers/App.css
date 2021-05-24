@@ -16,21 +16,23 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .row-center {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: start;
+  align-items: center;
 }
+
 .row-space-between {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
 }
+
 .text-center {
   text-align: center;
 }

@@ -73,7 +73,8 @@ class App extends Component {
             input: "",
             celebrityName: "",
             box: {},
-            route: "sign-in"
+            route: "sign-in",
+            isSignedIn: false,
         };
     }
 
@@ -128,6 +129,13 @@ class App extends Component {
     };
 
     onRouteChange = (route) => {
+        if (route === "sign-out") {
+            this.setState({ isSignedIn: false });
+        } else if (route === "home") {
+            this.setState({ isSignedIn: true });
+        } else if (route === "sign-in") {
+            this.setState({ isSignedIn: false });
+        }
         this.setState({ route: route });
     }
 
@@ -136,8 +144,8 @@ class App extends Component {
             <>
                 <div className="App">
                     <Particles className="particles" params={particlesOptions} />{" "}
-                    <Navigation onRouteChange={this.onRouteChange} route={this.state.route} />
-                    {this.state.route === "home" ?
+                    <Navigation onRouteChange={this.onRouteChange} isSignedIn={this.state.isSignedIn} />
+                    {(this.state.route === "home" && this.state.isSignedIn) ?
                         <div>
                             <Rank />
                             <ImageLinkForm
