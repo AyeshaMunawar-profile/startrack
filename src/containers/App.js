@@ -129,12 +129,10 @@ class App extends Component {
     };
 
     onRouteChange = (route) => {
-        if (route === "sign-out") {
+        if (route === "sign-in" || route === "sign-up") {
             this.setState({ isSignedIn: false });
         } else if (route === "home") {
             this.setState({ isSignedIn: true });
-        } else if (route === "sign-in") {
-            this.setState({ isSignedIn: false });
         }
         this.setState({ route: route });
     }
@@ -159,7 +157,7 @@ class App extends Component {
                                     box={this.state.box}
                                 />{" "}
                             </ErrorBoundary>{" "}
-                        </div> : (this.state.route === "sign-in" ? <SignInForm onRouteChange={this.onRouteChange} /> : <RegistrationForm onRouteChange={this.onRouteChange} />)
+                        </div> : (this.state.route === "sign-in" || this.state.route === "sign-in"? <SignInForm onRouteChange={this.onRouteChange} /> : <RegistrationForm onRouteChange={this.onRouteChange} />)
                     }
                 </div>{" "}
             </>
