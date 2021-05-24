@@ -129,23 +129,22 @@ class App extends Component {
     };
 
     onRouteChange = (route) => {
-        if (route === "sign-out") {
+        if (route === "sign-in" || route === "sign-up") {
             this.setState({ isSignedIn: false });
         } else if (route === "home") {
             this.setState({ isSignedIn: true });
-        } else if (route === "sign-in") {
-            this.setState({ isSignedIn: false });
         }
         this.setState({ route: route });
     }
 
     render() {
+        const { input, celebrityName, box, route, isSignedIn } = this.state;
         return (
             <>
                 <div className="App">
                     <Particles className="particles" params={particlesOptions} />{" "}
-                    <Navigation onRouteChange={this.onRouteChange} isSignedIn={this.state.isSignedIn} />
-                    {(this.state.route === "home" && this.state.isSignedIn) ?
+                    <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn} />
+                    {(route === "home" && isSignedIn) ?
                         <div>
                             <Rank />
                             <ImageLinkForm
@@ -154,12 +153,12 @@ class App extends Component {
                             />{" "}
                             <ErrorBoundary>
                                 <FaceRecognition
-                                    imageUrl={this.state.input && this.state.input}
-                                    celebrityName={this.state.celebrityName}
-                                    box={this.state.box}
+                                    imageUrl={input && input}
+                                    celebrityName={celebrityName}
+                                    box={box}
                                 />{" "}
                             </ErrorBoundary>{" "}
-                        </div> : (this.state.route === "sign-in" ? <SignInForm onRouteChange={this.onRouteChange} /> : <RegistrationForm onRouteChange={this.onRouteChange} />)
+                        </div> : (route === "sign-in" || route === "sign-in" ? <SignInForm onRouteChange={this.onRouteChange} /> : <RegistrationForm onRouteChange={this.onRouteChange} />)
                     }
                 </div>{" "}
             </>
