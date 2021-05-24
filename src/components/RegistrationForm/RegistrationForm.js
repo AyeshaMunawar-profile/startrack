@@ -4,7 +4,7 @@ import './RegistrationForm.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const RegistrationForm = () => {
+const RegistrationForm = ({ onRouteChange }) => {
     const [dateOfBirth, setdateOfBirth] = useState(new Date());
     return (
         <>
@@ -69,7 +69,8 @@ const RegistrationForm = () => {
                     </FormGroup>
 
                     <Button type={"submit"}
-                        className={"button-color-yellow__0 text-off-white__0 px-5 py-3 center fs-3 btn-sign-up"}>Sign-up</Button>
+                        className={"button-color-yellow__0 text-off-white__0 px-5 py-3 center fs-3 btn-sign-up"}
+                        onClick={() => onRouteChange("home")}>Sign-up</Button>
                 </Form>
             </div>
         </>

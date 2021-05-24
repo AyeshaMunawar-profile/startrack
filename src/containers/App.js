@@ -70,7 +70,7 @@ class App extends Component {
             input: "",
             celebrityName: "",
             box: {},
-            route: "sign-up"
+            route: "sign-in"
         };
     }
 
@@ -125,7 +125,7 @@ class App extends Component {
     };
 
     onRouteChange = (route) => {
-        this.setState({route : route});
+        this.setState({ route: route });
     }
 
     render() {
@@ -133,11 +133,11 @@ class App extends Component {
             <>
                 <div className="App">
                     <Particles className="particles" params={particlesOptions} />{" "}
-                    <Navigation onRouteChange={this.onRouteChange} route={this.state.route}/>
+                    <Navigation onRouteChange={this.onRouteChange} route={this.state.route} />
                     {this.state.route === "sign-in" ?
                         <SignInForm onRouteChange={this.onRouteChange} />
                         : this.state.route === "sign-up" ?
-                            <RegistrationForm /> :
+                            <RegistrationForm onRouteChange={this.onRouteChange} /> :
                             <div>
                                 <Rank />
                                 <ImageLinkForm
