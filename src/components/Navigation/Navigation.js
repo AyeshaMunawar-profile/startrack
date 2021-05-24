@@ -16,7 +16,15 @@ const Navigation = ({ onRouteChange, route }) => {
                             onClick={() => onRouteChange("sign-in")}>
                             Sign Out
                     </NavLink>
-                    </NavItem> : ""
+                    </NavItem> :
+                    <div>
+                        <NavItem className="me-4">
+                            <NavLink className='display-4 pointer link-color-yellow__-1 p-4'
+                            >
+                                STAR TRACK
+                    </NavLink>
+                        </NavItem>
+                    </div>
                 }
             </Navbar>
         </>
