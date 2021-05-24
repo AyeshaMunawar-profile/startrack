@@ -1,44 +1,56 @@
 .center {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .space-between {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .column-right {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
 }
 
+.row-center {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: start;
+}
+.row-space-between {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: start;
+}
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .input {
-    border: none;
-    border-radius: 0.3rem 0 0 0.3rem;
+  border: none;
+  border-radius: 0.3rem 0 0 0.3rem;
 }
 
 .input:focus-visible {
-    border: none;
-    outline: none;
-    box-shadow: -1px -1px 14px var(--box-shadow__yellow);
+  border: none;
+  outline: none;
+  box-shadow: -1px -1px 14px var(--box-shadow__yellow);
 }
