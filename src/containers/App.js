@@ -134,24 +134,21 @@ class App extends Component {
                 <div className="App">
                     <Particles className="particles" params={particlesOptions} />{" "}
                     <Navigation onRouteChange={this.onRouteChange} route={this.state.route} />
-                    {this.state.route === "sign-in" ?
-                        <SignInForm onRouteChange={this.onRouteChange} />
-                        : this.state.route === "sign-up" ?
-                            <RegistrationForm onRouteChange={this.onRouteChange} /> :
-                            <div>
-                                <Rank />
-                                <ImageLinkForm
-                                    onSearchChange={this.onSearchChange}
-                                    onURLSubmit={this.onURLSubmit}
+                    {this.state.route === "home" ?
+                        <div>
+                            <Rank />
+                            <ImageLinkForm
+                                onSearchChange={this.onSearchChange}
+                                onURLSubmit={this.onURLSubmit}
+                            />{" "}
+                            <ErrorBoundary>
+                                <FaceRecognition
+                                    imageUrl={this.state.input && this.state.input}
+                                    celebrityName={this.state.celebrityName}
+                                    box={this.state.box}
                                 />{" "}
-                                <ErrorBoundary>
-                                    <FaceRecognition
-                                        imageUrl={this.state.input && this.state.input}
-                                        celebrityName={this.state.celebrityName}
-                                        box={this.state.box}
-                                    />{" "}
-                                </ErrorBoundary>{" "}
-                            </div>
+                            </ErrorBoundary>{" "}
+                        </div> : (this.state.route === "sign-in" ? <SignInForm onRouteChange={this.onRouteChange} /> : <RegistrationForm onRouteChange={this.onRouteChange} />)
                     }
                 </div>{" "}
             </>
