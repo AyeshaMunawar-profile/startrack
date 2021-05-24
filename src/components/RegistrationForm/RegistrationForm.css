@@ -32,11 +32,23 @@
   background-color: var(--color-yellow__0) !important;
 }
 .react-datepicker__navigation--previous {
+  left: 1em;
   border-right-color: var(--color-black) !important;
 }
 .react-datepicker__navigation--next {
+  right: 1em;
   border-left-color: var(--color-black) !important;
 }
 .react-datepicker__day--selected {
   background-color: var(--color-red__0) !important;
+}
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
+  border-bottom-color: var(--color-yellow__0) !important;
+  top: 99%;
+  left: 93%;
+}
+.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle {
+  border-bottom-color: var(--color-yellow__0) !important;
+  top: 99%;
+  left: 0%;
 }
