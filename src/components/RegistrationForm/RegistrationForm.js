@@ -16,14 +16,14 @@ const RegistrationForm = () => {
                     </FormText>
 
                     <FormGroup className={"column-right"}>
-                        <Label for={"email"} className={"pe-5"}>Email Address</Label>
+                        <Label for={"email"} className={"pe-5 fs-3"}>Email Address</Label>
                         <input className={"rounded-1 border-0 ps-2 px-5 fs-3 py-2 input input-email w-100"} name={"email"} type={"email"}
                             id={"sign-up-email"}
                             placeholder={"example@domain.com"} />
                     </FormGroup>
 
                     <FormGroup className={"column-right"}>
-                        <Label for={"date-of-birth"} className={"pe-5"}>Date Of Birth</Label>
+                        <Label for={"date-of-birth"} className={"pe-5 fs-3"}>Date Of Birth</Label>
                         <DatePicker
                             className="input input-date-of-birth rounded-1 border-0 ps-2 px-5 fs-3 py-2 w-100"
                             selected={dateOfBirth}
@@ -32,13 +32,13 @@ const RegistrationForm = () => {
                     </FormGroup>
 
                     <FormGroup className={"column-right"}>
-                        <Label for={"password"} className={"pe-5"}>Password</Label>
+                        <Label for={"password"} className={"pe-5 fs-3"}>Password</Label>
                         <input name={"password"} type={"password"} id={"sign-up-password"} placeholder={""}
                             className={"rounded-1 border-0 ps-2 px-5 fs-3 py-2 input input-password w-100"} />
                     </FormGroup>
 
                     <FormGroup className={"column-right"}>
-                        <Label for={"confirm-password"} className={"pe-5"}>Confirm Password</Label>
+                        <Label for={"confirm-password"} className={"pe-5 fs-3"}>Confirm Password</Label>
                         <input name={"confirm-password"} type={"confirm-password"} id={"sign-up-confirm-password"} placeholder={""}
                             className={"rounded-1 border-0  ps-2 px-5 fs-3 py-2 input input-confirm-password w-100"} />
                     </FormGroup>

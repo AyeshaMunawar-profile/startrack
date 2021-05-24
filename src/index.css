@@ -122,6 +122,11 @@ button {
 }
 
 /*Links*/
+.link {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
 .link-color-yellow__-1 {
   color: var(--color-yellow__-1) !important;
 }
@@ -283,6 +288,7 @@ button {
   background-color: var(--red-transparent);
 }
 .form-check-input {
+  cursor: pointer;
   margin-right: 15px;
 }
 .form-check-input:focus {
