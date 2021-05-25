@@ -21,7 +21,7 @@ const faceRecognitionApp = new Clarifai.App({
 const particlesOptions = {
     particles: {
         number: {
-            value: 150,
+            value: 200,
             density: {
                 enable: true,
                 value_area: 1500,
@@ -32,7 +32,7 @@ const particlesOptions = {
         },
         line_linked: {
             enable: true,
-            opacity: 0.05,
+            opacity: 0.04,
         },
         move: {
             direction: "random",

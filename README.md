@@ -14,6 +14,10 @@ celebrity it is . This app has following features:
 # Technologies used
 
 1. [**REACT.JS**](https://reactjs.org/) for front end development
+      1) React class component vs function component
+      2) How to install and manage npm packages
+      3) React states both old method i.e in class component and new method using React Hooks
+      4) Use of React lifecycle methods e.g onComponentMound useLayoutEffect etc.
 2. **NODE.JS** and **EXPRESS.JS** for backend development
 3. **POSTGRE SQL** for database
 4. [**React Particles API**](https://www.npmjs.com/package/react-tsparticles) for showing particles in the background
