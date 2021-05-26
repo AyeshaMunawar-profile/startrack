@@ -23,9 +23,13 @@
   --color-yellow__-1: #ffe25d;
 
   --box-shadow__yellow: rgba(255, 226, 93, 0.7);
-  --box-shadow__black: rgba(0, 0, 0, 0.5);
+  --box-shadow__black__0: rgba(0, 0, 0, 0.5);
 
   --red-transparent: rgba(129, 0, 0, 0.6);
+  --color-error: #ff0800e3;
+  --color-error__hover: #eb0800fd;
+  --color-success: #96cc29;
+
   /*define the value of 1 rem i.e 1rem = 10px */
   font-size: 62.5%;
 }
@@ -152,7 +156,7 @@ button {
   border: none !important;
   background-color: var(--color-red__0) !important;
   color: var(--color-white);
-  box-shadow: 0 0 10px var(--box-shadow__black) !important;
+  box-shadow: 0 0 10px var(--box-shadow__black__0) !important;
   transition: all 0.5s ease-in-out;
 }
 
@@ -163,7 +167,7 @@ button {
   color: var(--color-white);
   border: none;
   outline: none;
-  box-shadow: 0 0 5px var(--box-shadow__black) !important;
+  box-shadow: 0 0 5px var(--box-shadow__black__0) !important;
   transform: translateY(1px);
 }
 
@@ -171,7 +175,7 @@ button {
   border: none !important;
   background-color: var(--color-yellow__0) !important;
   color: var(--color-black__0) !important;
-  box-shadow: 0 0 10px var(--box-shadow__black) !important;
+  box-shadow: 0 0 10px var(--box-shadow__black__0) !important;
   transition: all 0.5s ease-in-out;
 }
 
@@ -182,7 +186,7 @@ button {
   color: var(--color-black__1) !important;
   border: none;
   outline: none;
-  box-shadow: 0 0 5px var(--box-shadow__black) !important;
+  box-shadow: 0 0 5px var(--box-shadow__black__0) !important;
   transform: translateY(1px);
 }
 
@@ -190,7 +194,7 @@ button {
   border: none !important;
   background-color: var(--color-yellow__-1) !important;
   color: var(--color-black__0) !important;
-  box-shadow: 0 0 10px var(--box-shadow__black) !important;
+  box-shadow: 0 0 10px var(--box-shadow__black__0) !important;
   transition: all 0.5s ease-in-out;
 }
 
@@ -201,7 +205,7 @@ button {
   color: var(--color-black__1) !important;
   border: none;
   outline: none;
-  box-shadow: 0 0 5px var(--box-shadow__black) !important;
+  box-shadow: 0 0 5px var(--box-shadow__black__0) !important;
   transform: translateY(1px);
 }
 
@@ -306,4 +310,85 @@ button {
   outline: 0;
   box-shadow: 0 0 0 0.25rem var(--box-shadow__yellow) !important;
   background-color: var(--color-yellow__0) !important;
+}
+
+/* Sweat Alert Messages  */
+.swal-overlay {
+  background-color: var(--box-shadow__black__0);
+}
+.swal-modal {
+  background-color: var(--color-yellow__-1);
+}
+.swal-title {
+  color: var(--color-black);
+  margin: 0px;
+  font-size: 3rem;
+  margin-bottom: 2.8rem;
+}
+.swal-text {
+  background-color: var(--color-yellow__-1);
+  padding: 1.7rem;
+  padding-top: 5px;
+  display: block;
+  margin: 2.2rem;
+  margin-top: 5px;
+  text-align: center;
+  color: #61534e;
+}
+.swal-footer {
+  text-align: center;
+  background-color: var(--color-yellow__-1);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.swal-button {
+  box-shadow: 2px 2px 5px var(--box-shadow__black__0);
+}
+.swal-button:focus,
+.swal-button:active,
+.swal-button:hover {
+  outline: none;
+  border-color: none;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(1.5px);
+  background-color: var(--color-error__hover) !important;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transform: translateY(1.5px);
+  -moz-transform: translateY(1.5px);
+  -ms-transform: translateY(1.5px);
+  -o-transform: translateY(1.5px);
+  box-shadow: 2px 2px 2px var(--box-shadow__black__0);
+}
+.swal-button--error {
+  padding: 0.7rem 1.9rem;
+  border-radius: 2px;
+  background-color: var(--color-error);
+  color: var(--color-off-white__-1);
+  font-size: 1.2rem;
+  border: 1px solid transparent;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+.swal-button--confirm {
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  background-color: var(--color-error) !important;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.swal-icon--error {
+  border-color: var(--color-error);
+}
+.swal-icon--error .swal-icon--error__x-mark {
+  color: var(--color-error) !important;
+}
+.swal-icon--error__line {
+  background-color: var(--color-error);
 }

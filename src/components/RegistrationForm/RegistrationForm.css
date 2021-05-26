@@ -19,7 +19,7 @@
 
 .react-datepicker {
   border: none !important;
-  box-shadow: 0 0 6px var(--box-shadow__black);
+  box-shadow: 0 0 6px var(--box-shadow__black__0);
   font-size: 1.3rem Im !important;
 }
 .react-datepicker,
