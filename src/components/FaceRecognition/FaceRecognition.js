@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { displaySimpleAlert } from '../common/js/Alert/Alert';
 import './FaceRecognition.css'
 
 const FaceRecognition = ({ imageUrl, celebrityName, box }) => {
@@ -14,22 +15,28 @@ const FaceRecognition = ({ imageUrl, celebrityName, box }) => {
                     imgSet(imageUrl);
                     setValid(imageValid);
                 } else {
+                    displaySimpleAlert("Ooops !", "Image not found ... check your URL again", "OK", "error");
                     setDefaultImageSettings();
                 }
             } catch (err) {
+                displaySimpleAlert("Ooops !", "The image URL is invalid", "OK", "error");
                 setDefaultImageSettings();
             }
         }
         if (imageUrl && imageUrl) {
             checkImage();
+        }else{
+            displaySimpleAlert("Empty Url", "Enter a valid URL", "OK", "error");
         }
     }, [imageUrl, isValid])
 
     const setDefaultImageSettings = () => {
+        imgSet("");
         setValid(false);
     }
     const isImageValid = async (imgUrl) => {
         let isImageValid = false;
+
         try {
             const response = await axios.get(imgUrl,
                 {
