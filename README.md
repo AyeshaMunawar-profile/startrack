@@ -27,6 +27,8 @@ celebrity it is . This app has following features:
    image
 7. Use [**Reactstrap**](https://reactstrap.github.io/) and [**Bootstrap**](https://getbootstrap.com/) for UI
 8. Use [**React Axios**](https://www.npmjs.com/package/axios) A promise based HTTP client for the browser and node.js
+9. Use [**Sweat Alert**]() an npm package for showing the success and error messages to the user
+
 
 # Getting Started with Create React App
 

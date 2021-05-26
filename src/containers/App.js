@@ -6,10 +6,10 @@ import FaceRecognition from "../components/FaceRecognition/FaceRecognition";
 import Particles from "react-particles-js";
 import Clarifai from "clarifai";
 import "./App.css";
-import ErrorBoundary from "../components/Common/ErrorBoundary/ErrorBoundary";
+import ErrorBoundary from "../components/common/components/ErrorBoundary/ErrorBoundary";
 import SignInForm from "../components/SignInForm/SignInForm";
 import RegistrationForm from "../components/RegistrationForm/RegistrationForm";
-
+import {displaySimpleAlert} from "../components/common/js/Alert/Alert";
 
 
 const API_KEY = "e92c295461a84c32b581166305a711f3";
@@ -110,6 +110,7 @@ class App extends Component {
     };
 
     predictCelebrity() {
+        if (this.state.input){
         faceRecognitionApp.models
             .predict(Clarifai.CELEBRITY_MODEL, this.state.input)
             .then((response) => {
@@ -120,12 +121,20 @@ class App extends Component {
                     this.setState({ celebrityName: name });
                 }
             })
-            .catch((err) => console.log("Ooops! something went wrong !"));
+            .catch((err) => {
+                displaySimpleAlert("Ooops !", "Our facerecognition cannot be performed successfully", "Try Again", "error")
+                console.log("Ooops! something went wrong !")
+            });
         console.log("celebrity predicted successfully !!!");
+        }
     }
 
     onURLSubmit = (event) => {
-        this.setState({ url: this.state.input }, this.predictCelebrity);
+        if(this.state.input) {
+            this.setState({url: this.state.input}, this.predictCelebrity);
+        }else{
+            displaySimpleAlert("Empty Url", "Enter a valid URL", "OK", "error");
+        }
     };
 
     onRouteChange = (route) => {
