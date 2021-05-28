@@ -312,6 +312,9 @@ button {
   background-color: var(--color-yellow__0) !important;
 }
 
+.help {
+  color: var(--color-yellow__-1);
+}
 /* Sweat Alert Messages  */
 .swal-overlay {
   background-color: var(--box-shadow__black__0);
