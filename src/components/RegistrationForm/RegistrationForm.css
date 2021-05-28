@@ -46,7 +46,11 @@
   right: 1em;
   border-left-color: var(--color-black) !important;
 }
-.react-datepicker__day--selected {
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
   background-color: var(--color-red__0) !important;
 }
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {

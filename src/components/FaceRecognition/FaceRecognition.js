@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import { displaySimpleAlert } from '../common/js/Alert/Alert';
 import './FaceRecognition.css'
@@ -6,27 +6,34 @@ import './FaceRecognition.css'
 const FaceRecognition = ({ imageUrl, celebrityName, box }) => {
     const [img, imgSet] = useState('');
     const [isValid, setValid] = useState(false);
+    const firstUpdate = useRef(true);
 
     React.useLayoutEffect(() => {
-        const checkImage = async () => {
-            try {
-                const imageValid = await isImageValid(imageUrl)
-                if (imageValid) {
-                    imgSet(imageUrl);
-                    setValid(imageValid);
-                } else {
-                    displaySimpleAlert("Ooops !", "Image not found ... check your URL again", "OK", "error");
+        // donnot run uselayout effect for the frist render 
+        if (firstUpdate.current) {
+            firstUpdate.current = false;
+            return;
+        } else {
+            const checkImage = async () => {
+                try {
+                    const imageValid = await isImageValid(imageUrl)
+                    if (imageValid) {
+                        imgSet(imageUrl);
+                        setValid(imageValid);
+                    } else {
+                        displaySimpleAlert("Ooops !", "Image not found ... check your URL again", "OK", "error");
+                        setDefaultImageSettings();
+                    }
+                } catch (err) {
+                    displaySimpleAlert("Ooops !", "The image URL is invalid", "OK", "error");
                     setDefaultImageSettings();
                 }
-            } catch (err) {
-                displaySimpleAlert("Ooops !", "The image URL is invalid", "OK", "error");
-                setDefaultImageSettings();
             }
-        }
-        if (imageUrl && imageUrl) {
-            checkImage();
-        }else{
-            displaySimpleAlert("Empty Url", "Enter a valid URL", "OK", "error");
+            if (imageUrl && imageUrl) {
+                checkImage();
+            } else {
+                displaySimpleAlert("Empty Url", "Enter a valid URL", "OK", "error");
+            }
         }
     }, [imageUrl, isValid])
 
