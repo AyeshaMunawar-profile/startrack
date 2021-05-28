@@ -72,7 +72,7 @@ const RegistrationForm = ({ onRouteChange }) => {
                         <DatePicker
                             className="input input-date-of-birth rounded-1 border-0 ps-3 px-5 fs-3 py-3 w-100"
                             selected={values.dateOfBirth || new Date()}
-                            onChange={(event) => handleChange(event, SIMPLE_EVENT)}
+                            onChange={(event) => handleChange(event, SIMPLE_EVENT, "dateOfBirth")}
                             value={values.dateOfBirth || new Date()}
                             name={"dateOfBirth"}
                             required

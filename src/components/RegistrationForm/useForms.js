@@ -30,12 +30,14 @@ const useForm = (callback, validate) => {
         setIsSubmitting(true);
     };
 
-    const handleChange = (event, valueType = DEFAULT_EVENT) => {
+    const handleChange = (event, eventType = DEFAULT_EVENT, inputName = null) => {
         if (event && event.persist) {
             event.persist();
         }
-        if (valueType === SIMPLE_EVENT) { // for date as we are using a custom component the event has the value of date 
-            setValues(values => ({ ...values, "dateOfBirth": event }));
+        // simple event means the value of event is the value entered in the form 
+        // so it's value will be accessed using event not event.target.value
+        if (eventType === SIMPLE_EVENT && inputName) {
+            setValues(values => ({ ...values, [inputName]: event }));
         } else {
             setValues(values => ({ ...values, [event.target.name]: event.target.value }));
         }

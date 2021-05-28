@@ -46,12 +46,15 @@
   right: 1em;
   border-left-color: var(--color-black) !important;
 }
-.react-datepicker__day--selected,
+.react-datepicker__day--selected {
+  background-color: var(--color-red__0) !important;
+}
 .react-datepicker__day--keyboard-selected,
 .react-datepicker__month-text--keyboard-selected,
 .react-datepicker__quarter-text--keyboard-selected,
 .react-datepicker__year-text--keyboard-selected {
-  background-color: var(--color-red__0) !important;
+  background-color: var(--color-off-white__-1) !important;
+  color: var(--color-black) !important;
 }
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
   border-bottom-color: var(--color-yellow__0) !important;

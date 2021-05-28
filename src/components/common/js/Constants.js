@@ -3,6 +3,9 @@ export const STRONG = "STRONG";
 export const MEDIUM = "MEDIUM";
 export const WEAK = "WEAK";
 
+// Default event is the default event object its value is accessed using event.target.value 
+// Simple event is the tyep of event with value directly stored into it i.e 
+// to get the value of such event you use event not event.target.value 
 export const DEFAULT_EVENT = "DEFAULT_EVENT";
 export const SIMPLE_EVENT = "SIMPLE_EVENT";
 
