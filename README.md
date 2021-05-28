@@ -7,17 +7,18 @@ celebrity it is . This app has following features:
 1. Sign-up and Login
 2. Add image to the app using its **URL**
 3. Do **input validation** on the URL using fetch API
-4. Detect any celebrity face in the image using [**Clarifai API**](https://www.clarifai.com/)
-5. Show a rectangle around the faces being detected in the image
-6. Keep track of the number of times a user has used our app for face recognition
+4. Form validation custom Hooks
+5. Detect any celebrity face in the image using [**Clarifai API**](https://www.clarifai.com/)
+6. Show a rectangle around the faces being detected in the image
+7. Keep track of the number of times a user has used our app for face recognition
 
 # Technologies used
 
 1. [**REACT.JS**](https://reactjs.org/) for front end development
-      1) React class component vs function component
-      2) How to install and manage npm packages
-      3) React states both old method i.e in class component and new method using React Hooks
-      4) Use of React lifecycle methods e.g onComponentMound useLayoutEffect etc.
+   1. React class component vs function component
+   2. How to install and manage npm packages
+   3. React states both old method i.e in class component and new method using React Hooks
+   4. Use of React lifecycle methods e.g onComponentMound useLayoutEffect etc.
 2. **NODE.JS** and **EXPRESS.JS** for backend development
 3. **POSTGRE SQL** for database
 4. [**React Particles API**](https://www.npmjs.com/package/react-tsparticles) for showing particles in the background
@@ -28,7 +29,6 @@ celebrity it is . This app has following features:
 7. Use [**Reactstrap**](https://reactstrap.github.io/) and [**Bootstrap**](https://getbootstrap.com/) for UI
 8. Use [**React Axios**](https://www.npmjs.com/package/axios) A promise based HTTP client for the browser and node.js
 9. Use [**Sweat Alert**]() an npm package for showing the success and error messages to the user
-
 
 # Getting Started with Create React App
 
