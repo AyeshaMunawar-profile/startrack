@@ -12,7 +12,7 @@ const useForm = (callback, validate) => {
     // if the error list is empty after running the validate function 
     useEffect(() => {
         if (Object.keys(errors).length === 0 && isSubmitting) {
-            callback();
+            callback(values);
         }
     }, [errors]);
 
@@ -27,10 +27,6 @@ const useForm = (callback, validate) => {
         if (validationResult && validationResult.passwordStrength) {
             setPasswordStrength(validationResult.passwordStrength);
         }
-        console.log("values are :", values);
-        console.log("errors are :", errors);
-        console.log("is submitted value is :", isSubmitting);
-        console.log("password strength is :", passwordStrength);
         setIsSubmitting(true);
     };
 

@@ -8,8 +8,9 @@ import validate from './FormValidationRules';
 import { SIMPLE_EVENT } from "../common/js/Constants";
 
 const RegistrationForm = ({ onRouteChange }) => {
-    const registerUser = () => {
-        console.log("Form Submitted successfully no errors");
+    const registerUser = (values) => {
+        console.log("Form Submitted successfully no errors the values submitted are :");
+        console.log(values);
     }
     const { handleChange, handleSubmit, values, errors, passwordStrength } = useForms(registerUser, validate);
 
@@ -71,7 +72,7 @@ const RegistrationForm = ({ onRouteChange }) => {
                         <DatePicker
                             className="input input-date-of-birth rounded-1 border-0 ps-3 px-5 fs-3 py-3 w-100"
                             selected={values.dateOfBirth || new Date()}
-                            onChange={(event) => handleChange(event,SIMPLE_EVENT)}
+                            onChange={(event) => handleChange(event, SIMPLE_EVENT)}
                             value={values.dateOfBirth || new Date()}
                             name={"dateOfBirth"}
                             required
