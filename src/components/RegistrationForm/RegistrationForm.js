@@ -12,7 +12,7 @@ const RegistrationForm = ({ onRouteChange }) => {
         console.log("Form Submitted successfully no errors the values submitted are :");
         console.log(values);
     }
-    const { handleChange, handleSubmit, values, errors, passwordStrength } = useForms(registerUser, validate);
+    const { handleChange, handleSubmit, values, errors } = useForms(registerUser, validate);
 
     return (
         <>
@@ -114,9 +114,9 @@ const RegistrationForm = ({ onRouteChange }) => {
                                 required
                             />{' '}
                             I accept the
-                            <a className="link link-color-yellow__-1 ps-3 pe-3">Terms of use</a>
+                            <a className="link link-color-yellow__-1 ps-3 pe-3" href="#">Terms of use</a>
                             &
-                            <a className="link link-color-yellow__-1 ps-3 pe-3">Privacy Policy</a>
+                            <a className="link link-color-yellow__-1 ps-3 pe-3" href="#">Privacy Policy</a>
                         </Label>
                     </FormGroup>
 
