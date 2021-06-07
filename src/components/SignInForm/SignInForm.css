@@ -1,14 +1,14 @@
 .sign-in-form {
-    padding-top: 10rem;
-    padding-right: 3rem;
-    padding-left: 3rem;
+  padding-top: 10rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 .form-check-input:checked {
-    background-color: var(--color-red__0);
-    border-color: var(--color-red__1);
+  background-color: var(--color-red__0);
+  border-color: var(--color-red__1);
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
