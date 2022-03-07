@@ -75,7 +75,7 @@ const FaceRecognition = ({ imageUrl, celebrityName, box }) => {
           <div className="celebrity-image text-center text-white">
             <h1 className="celebrity-name fs-1 mb-5 fw-normal">
               {celebrityName
-                ? celebrityName.toString().toUpperCase()
+                ? "My Guess is : " + celebrityName.toString().toUpperCase()
                 : "Searching ..."}
             </h1>
             <div className="image-box">

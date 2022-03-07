@@ -7,7 +7,7 @@ const ImageLinkForm = ({ onSearchChange, onURLSubmit }) => {
       <div className="image-link-form mt-5 d-flex flex-column flex-nowrap justify-content-center align-items-center">
         <p className="fs-1 f-subheadline-m m5 text-yellow__0 text-center mb-5">
           {
-            "This app will detect faces in your pictures ... Take it at face value "
+            "This app will detect celebrity faces in your pictures ... Take it at face value "
           }
         </p>
         <div className="input-box w-75 text-center shadow">
