@@ -15,6 +15,10 @@ export const EMPTY_PASSWORD = "Password is required";
 export const SHORT_PASSWORD = "Password must be 8 or more characters";
 export const EMPTY_CONFIRM_PASSWORD = "Please confirm your password";
 export const PASSWORD_MISMATCH = "Both passwords don't match";
+export const PASSWORD_MEDIUM =
+  "Password strength : Medium ! Add special characters , numbers and capital letters";
+export const PASSWORD_WEAK =
+  "You password is weak! add special characters , numbers and capital letters";
 export const AGE_NOT_ELIGIBLE = "Users with age > 18 years eligible only !";
 export const MEDIUM_PASSWORD =
   "Weak Password! Add special characters , numbers and capital letters ";

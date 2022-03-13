@@ -14,6 +14,8 @@ import {
   strongRegex,
   mediumRegex,
   EMPTY_DATE_OF_BIRTH,
+  PASSWORD_MEDIUM,
+  PASSWORD_WEAK,
 } from "../common/js/Constants";
 
 export function getPasswordStrength(password) {

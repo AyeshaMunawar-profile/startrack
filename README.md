@@ -8,9 +8,10 @@ celebrity it is . This app has following features:
 2. Add image to the app using its **URL**
 3. Do **input validation** on the URL using fetch API
 4. Form validation custom Hooks
-5. Detect any celebrity face in the image using [**Clarifai API**](https://www.clarifai.com/)
-6. Show a rectangle around the faces being detected in the image
-7. Keep track of the number of times a user has used our app for face recognition
+5. check for password strength using Regx 
+6. Detect any celebrity face in the image using [**Clarifai API**](https://www.clarifai.com/)
+7. Show a rectangle around the faces being detected in the image
+8. Keep track of the number of times a user has used our app for face recognition
 
 # Technologies used
 
