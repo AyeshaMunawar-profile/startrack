@@ -10,6 +10,7 @@ import ErrorBoundary from "../components/common/components/ErrorBoundary/ErrorBo
 import SignInForm from "../components/SignInForm/SignInForm";
 import RegistrationForm from "../components/RegistrationForm/RegistrationForm";
 import { displaySimpleAlert } from "../components/common/js/Alert/Alert";
+import { endpoint } from "../config";
 
 const API_KEY = "e92c295461a84c32b581166305a711f3";
 const faceRecognitionApp = new Clarifai.App({
@@ -74,6 +75,12 @@ class App extends Component {
       route: "sign-in",
       isSignedIn: false,
     };
+  }
+
+  componentDidMount() {
+    fetch(endpoint)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   }
 
   onSearchChange = (event) => {
