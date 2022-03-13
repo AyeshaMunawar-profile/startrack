@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import "./RegistrationForm.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useForms from "./useForms";
 import validate from "./FormValidationRules";
-import { SIMPLE_EVENT } from "../common/js/Constants";
+import { STRONG, MEDIUM, WEAK, SIMPLE_EVENT } from "../common/js/Constants";
 
 const RegistrationForm = ({ onRouteChange }) => {
   const registerUser = (values) => {
@@ -14,11 +14,8 @@ const RegistrationForm = ({ onRouteChange }) => {
     );
     console.log(values);
   };
-  const { handleChange, handleSubmit, values, errors } = useForms(
-    registerUser,
-    validate
-  );
-
+  const { handleChange, handleSubmit, values, errors, passwordStrength } =
+    useForms(registerUser, validate);
   return (
     <>
       <div className="sign-up-form center py-5 px-2 w-100">
@@ -129,6 +126,16 @@ const RegistrationForm = ({ onRouteChange }) => {
               onChange={handleChange}
               value={values.password || ""}
               required
+            />
+            <span
+              className={"p-1 w-100 rounded-1 border-0"}
+              style={
+                passwordStrength && passwordStrength === STRONG
+                  ? { backgroundColor: "green" }
+                  : passwordStrength && passwordStrength === MEDIUM
+                  ? { backgroundColor: "yellow" }
+                  : { backgroundColor: "red" }
+              }
             />
             {errors.password && (
               <p className="help is-danger fs-4">{errors.password}</p>

@@ -11,6 +11,8 @@ import {
   WEAK,
   strongRegex,
   mediumRegex,
+  PASSWORD_MEDIUM,
+  PASSWORD_WEAK,
 } from "../common/js/Constants";
 
 export default function validate(values) {
@@ -33,8 +35,10 @@ export default function validate(values) {
       passwordStrength = STRONG;
     } else if (mediumRegex.test(values.password)) {
       passwordStrength = MEDIUM;
+      errors.password = PASSWORD_MEDIUM;
     } else {
       passwordStrength = WEAK;
+      errors.password = PASSWORD_WEAK;
     }
   }
 
