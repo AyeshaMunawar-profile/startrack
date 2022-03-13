@@ -9,11 +9,28 @@ import {
   STRONG,
   MEDIUM,
   WEAK,
+  WEAK_PASSWORD,
+  MEDIUM_PASSWORD,
   strongRegex,
   mediumRegex,
+  EMPTY_DATE_OF_BIRTH,
   PASSWORD_MEDIUM,
   PASSWORD_WEAK,
 } from "../common/js/Constants";
+
+export function getPasswordStrength(password) {
+  if (password && password.length > 0) {
+    if (strongRegex.test(password)) {
+      return STRONG;
+    } else if (mediumRegex.test(password)) {
+      return MEDIUM;
+    } else {
+      return WEAK;
+    }
+  } else {
+    return null;
+  }
+}
 
 export default function validate(values) {
   let errors = {};
@@ -23,6 +40,9 @@ export default function validate(values) {
     errors.email = ERROR_EMAIL_INVALID;
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
     errors.email = ERROR_EMAIL_INVALID;
+  }
+  if (!values.dateOfBirth) {
+    errors.dateOfBirth = EMPTY_DATE_OF_BIRTH;
   }
   if (!values.password) {
     errors.password = EMPTY_PASSWORD;
@@ -35,10 +55,10 @@ export default function validate(values) {
       passwordStrength = STRONG;
     } else if (mediumRegex.test(values.password)) {
       passwordStrength = MEDIUM;
-      errors.password = PASSWORD_MEDIUM;
+      errors.password = MEDIUM_PASSWORD;
     } else {
       passwordStrength = WEAK;
-      errors.password = PASSWORD_WEAK;
+      errors.password = WEAK_PASSWORD;
     }
   }
 

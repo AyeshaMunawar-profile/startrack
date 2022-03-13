@@ -4,8 +4,8 @@ import "./RegistrationForm.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useForms from "./useForms";
-import validate from "./FormValidationRules";
-import { STRONG, MEDIUM, WEAK, SIMPLE_EVENT } from "../common/js/Constants";
+import validate, { getPasswordStrength } from "./FormValidationRules";
+import { MEDIUM, STRONG, WEAK, SIMPLE_EVENT } from "../common/js/Constants";
 
 const RegistrationForm = ({ onRouteChange }) => {
   const registerUser = (values) => {
@@ -14,8 +14,19 @@ const RegistrationForm = ({ onRouteChange }) => {
     );
     console.log(values);
   };
-  const { handleChange, handleSubmit, values, errors, passwordStrength } =
-    useForms(registerUser, validate);
+
+  const [passwordQuality, setPasswordQuality] = useState(null);
+  const handlePasswordQualityChange = (quality) => {
+    setPasswordQuality(quality);
+  };
+
+  const { handleChange, handleSubmit, values, errors } = useForms(
+    registerUser,
+    validate,
+    getPasswordStrength,
+    handlePasswordQualityChange
+  );
+
   return (
     <>
       <div className="sign-up-form center py-5 px-2 w-100">
@@ -128,13 +139,15 @@ const RegistrationForm = ({ onRouteChange }) => {
               required
             />
             <span
-              className={"p-1 w-100 rounded-1 border-0"}
+              className={"p-1 border-0 w-100 rounded-1"}
               style={
-                passwordStrength && passwordStrength === STRONG
+                passwordQuality === STRONG
                   ? { backgroundColor: "green" }
-                  : passwordStrength && passwordStrength === MEDIUM
-                  ? { backgroundColor: "yellow" }
-                  : { backgroundColor: "red" }
+                  : passwordQuality === MEDIUM
+                  ? { backgroundColor: "orange" }
+                  : passwordQuality === WEAK
+                  ? { backgroundColor: "red" }
+                  : { display: "none" }
               }
             />
             {errors.password && (

@@ -20,6 +20,10 @@ export const PASSWORD_MEDIUM =
 export const PASSWORD_WEAK =
   "You password is weak! add special characters , numbers and capital letters";
 export const AGE_NOT_ELIGIBLE = "Users with age > 18 years eligible only !";
+export const MEDIUM_PASSWORD =
+  "Weak Password! Add special characters , numbers and capital letters ";
+export const WEAK_PASSWORD =
+  "Weak Password! Add special characters , numbers and capital letters ";
 export const EMPTY_DATE_OF_BIRTH = "Date of birth is required";
 export const TEXT_EMPTY = (value) => {
   return "Please enter " + value;

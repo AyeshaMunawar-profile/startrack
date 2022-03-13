@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { DEFAULT_EVENT, SIMPLE_EVENT } from "../common/js/Constants";
 
-const useForm = (callback, validate) => {
+const useForm = (
+  callback,
+  validate,
+  getPasswordStrength,
+  handlePasswordQualityChange
+) => {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,6 +43,10 @@ const useForm = (callback, validate) => {
     if (eventType === SIMPLE_EVENT && inputName) {
       setValues((values) => ({ ...values, [inputName]: event }));
     } else {
+      // if the input is password set password strength on its change
+      if (event.target.name === "password") {
+        handlePasswordQualityChange(getPasswordStrength(event.target.value));
+      }
       setValues((values) => ({
         ...values,
         [event.target.name]: event.target.value,
