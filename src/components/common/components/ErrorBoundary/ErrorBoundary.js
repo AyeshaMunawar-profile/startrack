@@ -9,7 +9,7 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.log("Ooops something went wrong ! " + error);
+    console.log("Oops something went wrong ! " + error + errorInfo);
     this.setState({ hasError: true });
   }
 
@@ -23,7 +23,7 @@ class ErrorBoundary extends Component {
         </>
       );
     } else {
-      return this.props.children;
+      return this.props?.children;
     }
   }
 }

@@ -12,3 +12,8 @@
 .form-group {
     margin-bottom: 1.5rem;
 }
+.sign-up-link:focus,
+.sign-up-link:active,
+.sign-up-link:hover{
+    color: var(--color-yellow__0);
+}

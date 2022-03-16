@@ -1,10 +1,12 @@
 import React from "react";
 import "./ImageLinkForm.css";
+import Rank from "../Rank/Rank";
 
 const ImageLinkForm = ({ onSearchChange, onURLSubmit }) => {
   return (
     <>
       <div className="image-link-form mt-5 d-flex flex-column flex-nowrap justify-content-center align-items-center">
+        <Rank />
         <p className="fs-1 f-subheadline-m m5 text-yellow__0 text-center mb-5">
           {
             "This app will detect celebrity faces in your pictures ... Take it at face value "

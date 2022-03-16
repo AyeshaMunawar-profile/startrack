@@ -1,3 +1,12 @@
+a{
+    text-decoration: none;
+    color: var(--color-yellow__-1) !important;
+}
+a:focus,
+a:hover,
+a:active{
+    color: var(--color-yellow__0) !important;
+}
 .nav-bar {
     display: flex;
     justify-content: space-between;

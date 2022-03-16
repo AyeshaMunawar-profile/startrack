@@ -5,9 +5,11 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useForms from "./useForms";
 import validate, { getPasswordStrength } from "./FormValidationRules";
+import { Link } from "react-router-dom";
+
 import { MEDIUM, STRONG, WEAK, SIMPLE_EVENT } from "../common/js/Constants";
 
-const RegistrationForm = ({ onRouteChange }) => {
+const RegistrationForm = () => {
   const registerUser = (values) => {
     console.log(
       "Form Submitted successfully no errors the values submitted are :"
@@ -54,6 +56,7 @@ const RegistrationForm = ({ onRouteChange }) => {
                 onChange={handleChange}
                 value={values.firstName || ""}
                 required
+                autoComplete="on"
               />
               {errors.firstName && (
                 <p className="help is-danger fs-4">{errors.firstName}</p>
@@ -75,6 +78,7 @@ const RegistrationForm = ({ onRouteChange }) => {
                 onChange={handleChange}
                 value={values.lastName || ""}
                 required
+                autoComplete="on"
               />
               {errors.lastName && (
                 <p className="help is-danger fs-4">{errors.lastName}</p>
@@ -97,6 +101,7 @@ const RegistrationForm = ({ onRouteChange }) => {
               onChange={handleChange}
               value={values.email || ""}
               required
+              autoComplete="off"
             />
             {errors.email && (
               <p className="help is-danger fs-4">{errors.email}</p>
@@ -137,6 +142,7 @@ const RegistrationForm = ({ onRouteChange }) => {
               onChange={handleChange}
               value={values.password || ""}
               required
+              autoComplete="off"
             />
             <span
               className={"p-1 border-0 w-100 rounded-1"}
@@ -144,10 +150,10 @@ const RegistrationForm = ({ onRouteChange }) => {
                 passwordQuality === STRONG
                   ? { backgroundColor: "green" }
                   : passwordQuality === MEDIUM
-                  ? { backgroundColor: "orange" }
-                  : passwordQuality === WEAK
-                  ? { backgroundColor: "red" }
-                  : { display: "none" }
+                    ? { backgroundColor: "orange" }
+                    : passwordQuality === WEAK
+                      ? { backgroundColor: "red" }
+                      : { display: "none" }
               }
             />
             {errors.password && (
@@ -170,6 +176,7 @@ const RegistrationForm = ({ onRouteChange }) => {
               onChange={handleChange}
               value={values.confirmPassword || ""}
               required
+              autoComplete="off"
             />
             {errors.confirmPassword && (
               <p className="help is-danger fs-4">{errors.confirmPassword}</p>
@@ -184,26 +191,21 @@ const RegistrationForm = ({ onRouteChange }) => {
                 required
               />{" "}
               I accept the
-              <a className="link link-color-yellow__-1 ps-3 pe-3" href="#">
-                Terms of use
-              </a>
+              <div className="link link-color-yellow__-1 ps-3 pe-3" href="#">
+                <Link to={""}>Terms of use</Link>
+              </div>
               &
-              <a className="link link-color-yellow__-1 ps-3 pe-3" href="#">
-                Privacy Policy
-              </a>
+              <div className="link link-color-yellow__-1 ps-3 pe-3">
+                <Link to={""}>Privacy Policy</Link>
+              </div>
             </Label>
           </FormGroup>
 
           <Button
-            type={"submit"}
             className={
               "button-color-yellow__0 text-off-white__0 px-5 py-3 center fs-3 btn-sign-up"
             }
-            onClick={() => {
-              if (!errors) {
-                onRouteChange("home");
-              }
-            }}
+            type={"submit"}
             value={"home"}
           >
             Sign-up

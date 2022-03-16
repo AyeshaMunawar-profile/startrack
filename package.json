@@ -15,10 +15,12 @@
     "react-datepicker": "^3.8.0",
     "react-dom": "^17.0.2",
     "react-parallax-tilt": "^1.5.11",
-    "react-particles-js": "^3.4.1",
+    "react-router-dom": "^6.2.2",
     "react-scripts": "^4.0.3",
+    "react-tsparticles": "^1.42.2",
     "reactstrap": "^8.9.0",
     "sweetalert": "^2.1.2",
+    "tsparticles": "^1.42.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -26,8 +28,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint .",
-    "precommit": "pretty-quick --staged"
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix",
+    "precommit": "pretty-quick --staged",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -50,8 +54,11 @@
   "devDependencies": {
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^3.4.0",
-    "husky": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.1",
     "pretty-quick": "^3.1.0"

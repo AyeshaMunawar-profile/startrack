@@ -9,7 +9,7 @@ const FaceRecognition = ({ imageUrl, celebrityName, box }) => {
   const firstUpdate = useRef(true);
 
   React.useLayoutEffect(() => {
-    // donnot run uselayout effect for the frist render
+    // don't run layout effect for the first render
     if (firstUpdate.current) {
       firstUpdate.current = false;
       return;
@@ -22,7 +22,7 @@ const FaceRecognition = ({ imageUrl, celebrityName, box }) => {
             setValid(imageValid);
           } else {
             displaySimpleAlert(
-              "Ooops !",
+              "Oops !",
               "Image not found ... check your URL again",
               "OK",
               "error"
@@ -31,7 +31,7 @@ const FaceRecognition = ({ imageUrl, celebrityName, box }) => {
           }
         } catch (err) {
           displaySimpleAlert(
-            "Ooops !",
+            "Oops !",
             "The image URL is invalid",
             "OK",
             "error"
@@ -62,7 +62,13 @@ const FaceRecognition = ({ imageUrl, celebrityName, box }) => {
         isImageValid = response && response.data && response.status === 200;
       }
     } catch (error) {
-      console.error("Image no found" + error);
+      console.error("Image not found" + error);
+      displaySimpleAlert(
+        "Image Not Found",
+        " Enter a valid URL",
+        "Try again",
+        "error"
+      );
       isImageValid = false;
     }
     return isImageValid;
@@ -101,7 +107,7 @@ const FaceRecognition = ({ imageUrl, celebrityName, box }) => {
         ) : (
           <div className="error-box p-3 m-3">
             <h1 className="fs-2 text-off-white__1 fw-normal error-message">
-              {img ? "Ooops! Image not found" : ""}
+              {img ? "Oops! Image not found" : ""}
             </h1>
           </div>
         )}

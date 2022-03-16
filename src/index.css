@@ -21,6 +21,7 @@
     --color-yellow__1: #ecb100;
     --color-yellow__0: #f7b904;
     --color-yellow__-1: #ffe25d;
+    --color-yellow__-2: #fbf6e8;
 
     --box-shadow__yellow: rgba(255, 226, 93, 0.7);
     --box-shadow__black__0: rgba(0, 0, 0, 0.5);
@@ -67,7 +68,9 @@ code {
 button {
     cursor: pointer;
 }
-
+a{
+    text-decoration: none !important;
+}
 .pointer {
     cursor: pointer !important;
 }
@@ -324,7 +327,7 @@ button {
 }
 
 .swal-modal {
-    background-color: var(--color-yellow__-1);
+    background-color: var(--color-yellow__-2);
 }
 
 .swal-title {
@@ -335,7 +338,7 @@ button {
 }
 
 .swal-text {
-    background-color: var(--color-yellow__-1);
+    background-color: var(--color-yellow__-2);
     padding: 1.7rem;
     padding-top: 5px;
     display: block;
@@ -347,7 +350,7 @@ button {
 
 .swal-footer {
     text-align: center;
-    background-color: var(--color-yellow__-1);
+    background-color: var(--color-yellow__-2);
     margin-top: 2rem;
     margin-bottom: 2rem;
     overflow: hidden;
@@ -408,4 +411,11 @@ button {
 
 .swal-icon--error__line {
     background-color: var(--color-error);
+}
+
+.swal-icon--success__hide-corners,
+.swal-icon--success__hide-corners,
+.swal-icon--success:before,
+.swal-icon--success:after {
+    background-color: transparent;
 }
