@@ -1,9 +1,6 @@
 import {
-  ERROR_EMAIL_INVALID,
   EMPTY_PASSWORD,
   SHORT_PASSWORD,
-  TEXT_EMPTY,
-  AGE_NOT_ELIGIBLE,
   EMPTY_CONFIRM_PASSWORD,
   PASSWORD_MISMATCH,
   STRONG,
@@ -13,7 +10,6 @@ import {
   MEDIUM_PASSWORD,
   strongRegex,
   mediumRegex,
-  EMPTY_DATE_OF_BIRTH,
 } from "../common/js/Constants";
 
 export function getPasswordStrength(password) {
@@ -34,14 +30,6 @@ export default function validate(values) {
   let errors = {};
   let passwordStrength = undefined;
 
-  if (!values.email) {
-    errors.email = ERROR_EMAIL_INVALID;
-  } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-    errors.email = ERROR_EMAIL_INVALID;
-  }
-  if (!values.dateOfBirth) {
-    errors.dateOfBirth = EMPTY_DATE_OF_BIRTH;
-  }
   if (!values.password) {
     errors.password = EMPTY_PASSWORD;
   } else if (values.password.length < 8) {
@@ -66,22 +54,5 @@ export default function validate(values) {
     errors.confirmPassword = PASSWORD_MISMATCH;
   }
 
-  if (!values.firstName) {
-    errors.firstName = TEXT_EMPTY("First Name");
-  }
-
-  if (!values.lastName) {
-    errors.lastName = TEXT_EMPTY("Last Name");
-  }
-
-  if (!values.dateOfBirth) {
-    values.dateOfBirth = new Date();
-    errors.dateOfBirth = AGE_NOT_ELIGIBLE;
-  } else {
-    const currentDate = new Date();
-    if (currentDate.getFullYear() - values.dateOfBirth.getFullYear() < 18) {
-      errors.dateOfBirth = AGE_NOT_ELIGIBLE;
-    }
-  }
   return { errors, passwordStrength };
 }

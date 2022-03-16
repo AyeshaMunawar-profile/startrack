@@ -36,3 +36,20 @@ export const strongRegex = new RegExp(
 export const mediumRegex = new RegExp(
   "^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})"
 );
+
+// Alert message type
+export const MESSAGE_SUCCESS = "MESSAGE_SUCCESS";
+export const MESSAGE_ERROR = "MESSAGE_ERROR";
+export const MESSAGE_WARNING = "MESSAGE_WARNING";
+// response type
+export const ERROR = "error";
+export const WARNING = "warning";
+// routes
+export const HOME_ROUTE = "home";
+export const SIGN_IN_ROUTE = "sign-in";
+export const SIGN_UP_ROUTE = "sign-up";
+export const PRIVACY_POLICY_ROUTE = "privacy-policy";
+export const TERMS_OF_USE_ROUTE = "terms-of-use";
+export const CHANGE_PASSWORD_ROUTE = "change-password";
+// success messages from server
+export const SUCCESSFUL_LOGIN = "Successful login";
