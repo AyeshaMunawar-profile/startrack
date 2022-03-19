@@ -5,19 +5,39 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useForms from "./useForms";
 import validate, { getPasswordStrength } from "./FormValidationRules";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 
-import { MEDIUM, STRONG, WEAK, SIMPLE_EVENT } from "../common/js/Constants";
+import {MEDIUM, STRONG, WEAK, SIMPLE_EVENT, HOME_ROUTE} from "../common/js/Constants";
+import axios from "axios";
+import {SIGN_UP_ENDPOINT} from "../../config";
+import {displaySimpleAlert} from "../common/js/Alert/Alert";
 
 const RegistrationForm = () => {
+  const [passwordQuality, setPasswordQuality] = useState(null);
+  const navigate = useNavigate();
   const registerUser = (values) => {
     console.log(
       "Form Submitted successfully no errors the values submitted are :"
     );
+
     console.log(values);
+    axios.post(SIGN_UP_ENDPOINT, {
+      dateOfBirth:values.dateOfBirth,
+      email:values.email,
+      firstName:values.firstName,
+      lastName:values.lastName,
+      password:values.password,
+    }).then((response)=>{
+      if(response.status === 200){
+        displaySimpleAlert("Welcome !", "Account created successfully", "Proceed", "success");
+        navigate(HOME_ROUTE, {replace: true})
+      }
+    }).catch(error=>{
+      displaySimpleAlert("Oops !", "Sign up failed", "Try again", "error")
+      console.log(error);
+    })
   };
 
-  const [passwordQuality, setPasswordQuality] = useState(null);
   const handlePasswordQualityChange = (quality) => {
     setPasswordQuality(quality);
   };
