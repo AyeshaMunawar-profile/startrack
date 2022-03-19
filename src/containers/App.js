@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import { Routes, Route} from "react-router-dom";
+import React, { Component } from "react";
+import { Routes, Route } from "react-router-dom";
 import Navigation from "../components/Navigation/Navigation";
 import SignInForm from "../components/SignInForm/SignInForm";
 import RegistrationForm from "../components/RegistrationForm/RegistrationForm";
@@ -23,7 +23,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      route: "",
       isSignedIn: null,
     };
   }
@@ -46,11 +45,7 @@ class App extends Component {
     return (
       <>
         <div className="App">
-          <Navigation
-            onRouteChange={this.onRouteChange}
-            isSignedIn={isSignedIn}
-          />
-
+          <Navigation isSignedIn={isSignedIn} />
 
           {/*/ -> Landing page with navbar and particles*/}
           {/*/home -> Home page with image recognition form */}
