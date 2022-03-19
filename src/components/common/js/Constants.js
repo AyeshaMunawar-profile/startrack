@@ -45,11 +45,11 @@ export const MESSAGE_WARNING = "MESSAGE_WARNING";
 export const ERROR = "error";
 export const WARNING = "warning";
 // routes
-export const HOME_ROUTE = "home";
-export const SIGN_IN_ROUTE = "sign-in";
-export const SIGN_UP_ROUTE = "sign-up";
-export const PRIVACY_POLICY_ROUTE = "privacy-policy";
-export const TERMS_OF_USE_ROUTE = "terms-of-use";
-export const CHANGE_PASSWORD_ROUTE = "change-password";
+export const HOME_ROUTE = "/home";
+export const SIGN_IN_ROUTE = "/sign-in";
+export const SIGN_UP_ROUTE = "/sign-up";
+export const PRIVACY_POLICY_ROUTE = "/privacy-policy";
+export const TERMS_OF_USE_ROUTE = "/terms-of-use";
+export const CHANGE_PASSWORD_ROUTE = "/change-password";
 // success messages from server
 export const SUCCESSFUL_LOGIN = "Successful login";

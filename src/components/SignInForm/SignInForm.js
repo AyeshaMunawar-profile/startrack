@@ -45,7 +45,7 @@ const SignInForm = () => {
               "Proceed",
               "success"
             );
-            navigate("/home")
+            navigate("/home", {replace: true})
           }
         })
         .catch((error) => {
